@@ -1,0 +1,15 @@
+C:\Users\Iman\source\repos\MusicProject\Entites\bin\Debug\net6.0\Entites.deps.json
+C:\Users\Iman\source\repos\MusicProject\Entites\bin\Debug\net6.0\Entites.dll
+C:\Users\Iman\source\repos\MusicProject\Entites\bin\Debug\net6.0\Entites.pdb
+C:\Users\Iman\source\repos\MusicProject\Entites\bin\Debug\net6.0\Core.dll
+C:\Users\Iman\source\repos\MusicProject\Entites\bin\Debug\net6.0\Core.pdb
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.csproj.AssemblyReference.cache
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.AssemblyInfoInputs.cache
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.AssemblyInfo.cs
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.csproj.CopyComplete
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.dll
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\refint\Entites.dll
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\Entites.pdb
+C:\Users\Iman\source\repos\MusicProject\Entites\obj\Debug\net6.0\ref\Entites.dll
