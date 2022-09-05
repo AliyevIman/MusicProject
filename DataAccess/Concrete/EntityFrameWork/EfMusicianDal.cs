@@ -15,7 +15,7 @@ namespace DataAccess.Concrete.EntityFrameWork
         public List<Musician> GetMusicians()
         {
             using MusicDbContext context = new();
-            return context.Musicians.ToList();
+            return context.Musicians.Include(c=>c.Albums).Include(c=>c.Musics).ThenInclude(x=>x.Music).ToList();
         }
 
         public List<Musician> GetMusicMusician()
@@ -28,4 +28,3 @@ namespace DataAccess.Concrete.EntityFrameWork
         }
     }
 }
-    

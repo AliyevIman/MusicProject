@@ -22,9 +22,11 @@ namespace DataAccess.Concrete.EntityFrameWork
         public DbSet<Musician> Musicians{ get; set; }
         public DbSet<Albums> Albums { get; set; }
 
-        //public DbSet<Genre> Genres{ get; set; }
+        //public DbSet<Genre> Genres{ get; set; }   
         public DbSet<LiveShows> LiveShows { get; set; }
         public DbSet<MusicianShows> MusicianShows { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; } = null!;
         protected override void OnModelCreating(ModelBuilder builder)
         {

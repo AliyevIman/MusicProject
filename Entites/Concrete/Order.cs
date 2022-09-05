@@ -1,0 +1,21 @@
+﻿using Core.Abstract;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Entites.Concrete
+{
+    public class Order :IEntity
+    {
+        public int Id { get; set; }
+        public string Description { get; set; }
+        public string Address  { get; set; }
+        public List<Ticket> Ticket { get; set; }
+        [ForeignKey(nameof(User))]
+        public string UserId { get; set; }
+        public User User { get; set; }
+    }
+}

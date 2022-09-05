@@ -13,6 +13,7 @@ namespace Entites.DTO
         public string Biography { get; set; }
         public string Photo { get; set; }
         public bool IsNew { get; set; }
+        public List<AlbumListDTO> Albums { get; set; }
         public List<MusiciansMusicDTO> Musics { get; set; }
     }
 }

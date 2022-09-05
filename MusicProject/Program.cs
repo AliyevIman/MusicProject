@@ -32,8 +32,8 @@ builder.Services.AddIdentity<User, IdentityRole>()
 //Scopeds
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
-//builder.Services.AddScoped<IArtistDal, EfArtistDal>();
-//builder.Services.AddScoped<IArtistManager, ArtistManager>();
+builder.Services.AddScoped<IOrderDal, EfOrderDal>();
+builder.Services.AddScoped<IOrderManager, OrderManager>();
 builder.Services.AddScoped<IAlbumsDal, EfAlbumsDal>();
 builder.Services.AddScoped<IAlbumManager, AlbumManager>();
 //builder.Services.AddScoped<IGenreDal, EfGenreDal>();
@@ -47,8 +47,10 @@ builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
 builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
 builder.Services.AddScoped<TokenManager>();
+//Scopeds
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
