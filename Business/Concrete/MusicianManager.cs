@@ -23,6 +23,11 @@ namespace Business.Concrete
             return _dal.GetMusicians();
         }
 
+        public List<Musician> GetAllMusician()
+        {
+            return _dal.GetAll();
+        }
+
         public List<Musician> GetMusicMusician()
         {
             return _dal.GetMusicMusician();

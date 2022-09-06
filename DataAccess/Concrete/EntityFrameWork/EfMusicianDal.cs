@@ -12,6 +12,12 @@ namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfMusicianDal : EFEntityRepositoryBase<MusicDbContext, Musician>, IMusicianDal
     {
+        public List<Musician> GetAll()
+        {
+            using MusicDbContext context = new();
+            return context.Musicians.ToList();
+        }
+
         public List<Musician> GetMusicians()
         {
             using MusicDbContext context = new();

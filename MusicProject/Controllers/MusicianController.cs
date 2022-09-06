@@ -33,5 +33,13 @@ namespace MusicProject.Controllers
             return map;
 
         }
+        [HttpGet("GetAllMusician")]
+        public List<MusicianListDTO> GetAllMusician()
+        {
+            var list = _manager.GetAll();
+            var map = _map.Map<List<MusicianListDTO>>(list);
+            return map;
+        }
+
     }
 }

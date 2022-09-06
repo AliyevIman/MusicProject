@@ -10,6 +10,7 @@ namespace DataAccess.Abstract
 {
     public interface IMusicianDal :IEntityRepository<Musician>
     {
+        List<Musician> GetAll();
         List<Musician> GetMusicians();
         List<Musician> GetMusicMusician();
     }

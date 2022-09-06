@@ -9,6 +9,7 @@ namespace Business.Abstract
 {
     public interface IMusicianManager 
     {
+        List<Musician> GetAllMusician();
         List<Musician> GetAll();
         List<Musician> GetMusicMusician();
     }
