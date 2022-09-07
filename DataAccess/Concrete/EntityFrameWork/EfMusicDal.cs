@@ -23,5 +23,11 @@ namespace DataAccess.Concrete.EntityFrameWork
             using MusicDbContext context = new();
             return context.Musics.ToList();
         }
+
+        public List<Music> GetMusicsAll()
+        {
+            using MusicDbContext context = new();
+            return context.Musics.ToList();
+        }
     }
 }

@@ -18,6 +18,12 @@ namespace Business.Concrete
             _dal = dal;
         }
 
+        public List<Music> GetAllMusics()
+        {
+            return _dal.GetMusicsAll();
+     
+        }
+
         public List<Music> GetMusics()
         {
             return _dal.GetMusics();

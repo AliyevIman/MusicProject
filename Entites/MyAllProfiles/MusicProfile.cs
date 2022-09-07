@@ -15,6 +15,7 @@ namespace Entites.MyAllProfiles
         {
             CreateMap<Music, AlbumMusicDTO>();
             CreateMap<Music, MusicDTO>();
+            CreateMap<Music, MusicListDTO>();
 
         }
     }

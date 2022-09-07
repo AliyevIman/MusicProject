@@ -11,6 +11,9 @@ namespace DataAccess.Abstract
     public interface IMusicDal :IEntityRepository<Music>
     {
         List<Music> GetMusics();
+
+        List<Music> GetMusicsAll();
+
         //Music GetFeatureMusic();
     }
 }

@@ -10,5 +10,6 @@ namespace Business.Abstract
     public interface IMusicManager
     {
         List<Music> GetMusics();
+        List<Music> GetAllMusics();
     }
 }
