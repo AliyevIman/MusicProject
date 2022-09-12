@@ -27,5 +27,11 @@ namespace Business.Concrete
         {
             return _dal.GetAlbumsById(albumId);
         }
+
+        public Task<Albums> GetMusicByAlbum(int albumId)
+        {
+            if (albumId == null) return null;
+            return _dal.GetMusicByAlbum(albumId);
+        }
     }
 }

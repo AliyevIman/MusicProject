@@ -8,6 +8,7 @@ namespace Entites.DTO
 {
     public class MusicListDTO
     {
+        public int Id{ get; set; }
         public string Name { get; set; }
         public string MusicUrl { get; set; }
         public string MusicVideo { get; set; }

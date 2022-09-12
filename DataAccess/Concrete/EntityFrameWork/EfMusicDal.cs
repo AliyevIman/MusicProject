@@ -21,13 +21,13 @@ namespace DataAccess.Concrete.EntityFrameWork
         public List<Music> GetMusics()
         {
             using MusicDbContext context = new();
-            return context.Musics.ToList();
+            return context.Musics.Where(c => !c.IsDeleted).ToList();
         }
 
         public List<Music> GetMusicsAll()
         {
             using MusicDbContext context = new();
-            return context.Musics.ToList();
+            return context.Musics.Where(c => !c.IsDeleted).ToList();
         }
     }
 }

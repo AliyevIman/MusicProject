@@ -10,5 +10,6 @@ namespace Business.Abstract
     public interface ILiveShowsManager 
     {
         List<LiveShows> GetLiveShowsWithMusician();
+        Task<LiveShows> GetById(int id);
     }
 }

@@ -25,5 +25,13 @@ namespace MusicProject.Controllers
             var map=  _mapper.Map<List<LiveShowDTO>>(list);
             return map;
         }
+        [HttpGet("{id}")]
+        public async Task<LiveShowDTO> GetById(int id)
+        {
+
+            var list = await _manager.GetById(id);
+            var map = _mapper.Map<LiveShowDTO>(list);
+            return map;
+        }
     }
 }

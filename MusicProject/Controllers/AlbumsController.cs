@@ -20,10 +20,10 @@ namespace MusicProject.Controllers
         }
 
         [HttpGet("GetAll")]
-        public List<ALbumDTO> GetAll()
+        public List<AlbumWithMusicDTO> GetAll()
         {
             var list = _manager.GetAll();
-            var map = _mapper.Map<List<ALbumDTO>>(list);
+            var map = _mapper.Map<List<AlbumWithMusicDTO>>(list);
             return map;
         }
         [HttpGet("albums/{albumId}")]
@@ -33,6 +33,14 @@ namespace MusicProject.Controllers
             var list = _manager.GetMuicById(albumId.Value);
             var map = _mapper.Map<List<ALbumDTO>>(list);
             return map.ToList();
+        }
+        [HttpGet("music/{albumId}")]
+        public async Task<AlbumWithMusicDTO> GetById(int? albumId)
+        {
+            if (!albumId.HasValue) return null;
+            var list = await _manager.GetMusicByAlbum(albumId.Value);
+            var map = _mapper.Map<AlbumWithMusicDTO>(list);
+            return map;
         }
     }
 }

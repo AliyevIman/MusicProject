@@ -12,5 +12,6 @@ namespace DataAccess.Abstract
     {
         List<Albums> GetAlbumsWithMusic();
         List<Albums> GetAlbumsById( int albumId);
+        Task<Albums> GetMusicByAlbum( int albumId);
     }
 }

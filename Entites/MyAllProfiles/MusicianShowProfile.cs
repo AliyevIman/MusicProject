@@ -14,6 +14,7 @@ namespace Entites.MyAllProfiles
         public MusicianShowProfile()
         {
             CreateMap<MusicianShows, MusicianShowsDTO>();
+            CreateMap<MusicianShows, MusicianToLiveShowDTO>();
 
         }
     }

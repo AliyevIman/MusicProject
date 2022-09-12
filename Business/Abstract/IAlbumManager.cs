@@ -11,5 +11,6 @@ namespace Business.Abstract
     {
         List<Albums> GetAll();
         List<Albums> GetMuicById(int albumId);
+        Task<Albums> GetMusicByAlbum(int albumId);
     }
 }

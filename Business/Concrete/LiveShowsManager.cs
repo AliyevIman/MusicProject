@@ -18,6 +18,12 @@ namespace Business.Concrete
             _dal = dal;
         }
 
+        public Task<LiveShows> GetById(int id)
+        {
+            if (id == null) return null;
+            return _dal.GetById(id);
+        }
+
         public List<LiveShows> GetLiveShowsWithMusician()
         {
             return _dal.GetLiveShowsMusicans();

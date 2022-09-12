@@ -21,7 +21,13 @@ namespace DataAccess.Concrete.EntityFrameWork
         public List<Albums> GetAlbumsWithMusic()
         {
             using MusicDbContext _context = new();
-            return _context.Albums.Include(c=>c.Musician).ThenInclude(x=>x.Musics).ThenInclude(s=>s.Music).ToList();
+            return _context.Albums.Include(c => c.Music).Include(c=>c.Musician).ToList();
+        }
+
+        public async Task<Albums> GetMusicByAlbum(int albumId)
+        {
+            using MusicDbContext _context = new();
+            return await _context.Albums.Include(c => c.Musician).ThenInclude(x => x.Musics).ThenInclude(s => s.Music).FirstOrDefaultAsync(c => c.Id == albumId);
         }
     }
 }

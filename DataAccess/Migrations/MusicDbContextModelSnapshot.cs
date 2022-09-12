@@ -77,6 +77,12 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long>("Discount")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Loacation")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -89,8 +95,15 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long>("Price")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Stock")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TicketCount")
                         .IsRequired()
@@ -108,6 +121,9 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("AlbumsId")
+                        .HasColumnType("int");
 
                     b.Property<string>("AuthorName")
                         .IsRequired()
@@ -143,6 +159,8 @@ namespace DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AlbumsId");
 
                     b.ToTable("Musics");
                 });
@@ -206,10 +224,10 @@ namespace DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("MusicId")
+                    b.Property<int?>("MusicId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MusicianId")
+                    b.Property<int?>("MusicianId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -515,6 +533,15 @@ namespace DataAccess.Migrations
                     b.Navigation("Musician");
                 });
 
+            modelBuilder.Entity("Entites.Concrete.Music", b =>
+                {
+                    b.HasOne("Entites.Concrete.Albums", "Album")
+                        .WithMany("Music")
+                        .HasForeignKey("AlbumsId");
+
+                    b.Navigation("Album");
+                });
+
             modelBuilder.Entity("Entites.Concrete.MusicianShows", b =>
                 {
                     b.HasOne("Entites.Concrete.LiveShows", "LiveShows")
@@ -538,15 +565,11 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("Entites.Concrete.Music", "Music")
                         .WithMany("Musicians")
-                        .HasForeignKey("MusicId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MusicId");
 
                     b.HasOne("Entites.Concrete.Musician", "Musician")
                         .WithMany("Musics")
-                        .HasForeignKey("MusicianId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MusicianId");
 
                     b.Navigation("Music");
 
@@ -628,6 +651,11 @@ namespace DataAccess.Migrations
                         .HasForeignKey("TicketId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Entites.Concrete.Albums", b =>
+                {
+                    b.Navigation("Music");
                 });
 
             modelBuilder.Entity("Entites.Concrete.LiveShows", b =>

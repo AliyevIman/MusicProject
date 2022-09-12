@@ -12,12 +12,20 @@ namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfLiveShowsDal : EFEntityRepositoryBase<MusicDbContext, LiveShows>, ILiveShowsDal
     {
+        public async Task<LiveShows> GetById(int id)
+        {
+            using MusicDbContext context = new();
+            return await context.LiveShows.Include(c => c.Musicians).ThenInclude(c => c.Musicians).FirstOrDefaultAsync(s => s.Id == id && !s.IsDeleted);
+
+        }
+
         public List<LiveShows> GetLiveShowsMusicans()
         {
             using MusicDbContext context = new();
             return context.LiveShows
                 .Include(c=>c.Musicians)
                 .ThenInclude(x=>x.Musicians)
+                 .Where(c => !c.IsDeleted)
                 .ToList();
         }
     }

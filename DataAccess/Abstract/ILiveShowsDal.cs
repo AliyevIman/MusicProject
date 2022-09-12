@@ -11,6 +11,7 @@ namespace DataAccess.Abstract
     public interface ILiveShowsDal :IEntityRepository<LiveShows>
     {
         List<LiveShows> GetLiveShowsMusicans();
+        Task<LiveShows> GetById(int id);
 
     }
 }

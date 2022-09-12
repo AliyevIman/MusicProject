@@ -27,7 +27,7 @@ namespace DataAccess.Concrete.EntityFrameWork
         public List<Musician> GetMusicMusician()
         {
             using MusicDbContext context = new();
-            return context.Musicians.Include(s => s.Albums)
+            return context.Musicians
                 .Include(c => c.Musics)
                 .ThenInclude(s=>s.Music)
                 .ToList();

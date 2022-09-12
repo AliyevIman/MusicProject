@@ -19,6 +19,6 @@ namespace Entites.DTO
         public bool? IsFeatured { get; set; }
         [ForeignKey(nameof(Musician))]
         public int MusicianId { get; set; }
-        public MusicianDTO Musician { get; set; }
+        public MusicianWithMusicDTO Musician { get; set; }
     }
 }
