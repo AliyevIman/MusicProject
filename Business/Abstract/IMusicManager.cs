@@ -11,5 +11,8 @@ namespace Business.Abstract
     {
         List<Music> GetMusics();
         List<Music> GetAllMusics();
+        void AddMusic(Music music);
+        Music GetMusicById(int musicId);
+        void Delete(int musicId);
     }
 }

@@ -12,7 +12,6 @@ namespace Entites.DTO
         public string Name { get; set; }
         public string MusicUrl { get; set; }
         public string MusicVideo { get; set; }
-        public string EndTime { get; set; }
         public DateTime PublishDate { get; set; }
         public string Photo { get; set; }
         public string AuthorName { get; set; }

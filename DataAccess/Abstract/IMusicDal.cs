@@ -13,6 +13,9 @@ namespace DataAccess.Abstract
         List<Music> GetMusics();
 
         List<Music> GetMusicsAll();
+        void Create(Music music);
+        Music GetMusicById(int? musicId);
+        void Delete(int musicId);
 
         //Music GetFeatureMusic();
     }

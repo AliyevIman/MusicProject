@@ -18,10 +18,26 @@ namespace Business.Concrete
             _dal = dal;
         }
 
+        public void AddMusic(Music music)
+        {
+            music.PublishDate = DateTime.Now;
+            _dal.Create(music);
+        }
+
+        public void Delete(int musicId)
+        {
+           _dal.Delete(musicId);
+        }
+
         public List<Music> GetAllMusics()
         {
             return _dal.GetMusicsAll();
      
+        }
+
+        public Music GetMusicById(int musicId)
+        {
+            return _dal.GetMusicById(musicId);
         }
 
         public List<Music> GetMusics()

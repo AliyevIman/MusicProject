@@ -2632,19 +2632,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Iman\\.nuget\\packages\\": {}
+    "C:\\Users\\imane\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Iman\\source\\repos\\MusicProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\imane\\Desktop\\MusicProject\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\Iman\\source\\repos\\MusicProject\\Business\\Business.csproj",
-      "packagesPath": "C:\\Users\\Iman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Iman\\source\\repos\\MusicProject\\Business\\obj\\",
+      "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Business\\Business.csproj",
+      "packagesPath": "C:\\Users\\imane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Iman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\imane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2658,11 +2658,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Iman\\source\\repos\\MusicProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Iman\\source\\repos\\MusicProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\imane\\Desktop\\MusicProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Iman\\source\\repos\\MusicProject\\Entites\\Entites.csproj": {
-              "projectPath": "C:\\Users\\Iman\\source\\repos\\MusicProject\\Entites\\Entites.csproj"
+            "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\Entites.csproj": {
+              "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\Entites.csproj"
             }
           }
         }
@@ -2692,7 +2692,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
