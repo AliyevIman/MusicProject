@@ -13,6 +13,7 @@ namespace Business.Abstract
         List<Music> GetAllMusics();
         void AddMusic(Music music);
         Music GetMusicById(int musicId);
-        void Delete(int musicId);
+        void DeleteMusic(int musicId);
+        void Udpdate(int id, Music music);
     }
 }

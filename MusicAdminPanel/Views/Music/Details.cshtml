@@ -1,0 +1,51 @@
+﻿@model Music
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detail</h1>
+
+<div>
+    <h4>Music</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AuthorName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AuthorName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(model => model.Photo)" width="100" />
+
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MusicUrl)
+        </dt>
+        <dd class="col-sm-10">
+             <audio controls>
+                <source src="@Html.DisplayFor(model => model.MusicUrl)" type="audio/ogg">
+                <source src="@Html.DisplayFor(model => model.MusicUrl)" type="audio/mpeg">
+                    </audio> 
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MusicVideo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MusicVideo)
+        </dd>
+    </dl>
+
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

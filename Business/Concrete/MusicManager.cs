@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entites.Concrete;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,9 +25,14 @@ namespace Business.Concrete
             _dal.Create(music);
         }
 
-        public void Delete(int musicId)
+        public void DeleteMusic(int musicId)
         {
-           _dal.Delete(musicId);
+            var getMusic =  _dal.Get(c=>c.Id==musicId&&!c.IsDeleted);
+            if (getMusic !=null)
+            {
+                getMusic.IsDeleted = true;
+                _dal.Update(getMusic);
+            }
         }
 
         public List<Music> GetAllMusics()
@@ -37,12 +43,18 @@ namespace Business.Concrete
 
         public Music GetMusicById(int musicId)
         {
+            
             return _dal.GetMusicById(musicId);
         }
 
         public List<Music> GetMusics()
         {
             return _dal.GetMusics();
+        }
+
+        public void Udpdate(int id, Music music)
+        {
+            _dal.UpdateMusic(id, music);
         }
     }
 }

@@ -29,9 +29,20 @@ namespace MusicAdminPanel.Controllers
         }
 
         // GET: MusicController/Details/5
-        public ActionResult Details(int id)
+        public  ActionResult Details(int Id)
         {
-            return View();
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            var music = _manager.GetMusicById(Id);
+            if (music == null)
+            {
+                return NotFound();
+            }
+
+            return View(music);
         }
 
         // GET: MusicController/Create
@@ -83,22 +94,39 @@ namespace MusicAdminPanel.Controllers
         // GET: MusicController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var music = _manager.GetMusicById(id);
+            if (music == null)
+            {
+                return NotFound();
+            }
+            return View(music);
         }
 
         // POST: MusicController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id, [Bind("Id,name,photo,musicUrl,musicVideo,authorName")] Music music)
         {
-            try
+            if (id != music.Id)
             {
+                return NotFound();
+            }
+
+                try
+                {
+                    _manager.Udpdate(id,music);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    return View(music);
+                }
                 return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            //return View(music);
         }
 
         // GET: MusicController/Delete/5
@@ -113,11 +141,15 @@ namespace MusicAdminPanel.Controllers
         // POST: MusicController/Delete/5
         [HttpPost,ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult DeleteConfrimed(int? Id)
         {
-                
-                _manager.Delete(id);
-                return RedirectToAction(nameof(Index));
+            if (Id ==null)
+            {
+                return NotFound();
+            }
+
+            _manager.DeleteMusic(Id.Value);
+               return RedirectToAction(nameof(Index));
 
         }
     }

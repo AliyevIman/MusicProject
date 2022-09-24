@@ -18,20 +18,11 @@ namespace DataAccess.Concrete.EntityFrameWork
             context.Musics.Add(music);
             context.SaveChanges();
         }
-
-        public void Delete(int musicId)
-        {
-            using MusicDbContext _context = new();
-
-            var music =  _context.Musics.Find(musicId);
-            _context.Musics.Remove(music);
-             _context.SaveChangesAsync();
-        }
-
         public Music GetMusicById(int? musicId)
         {
             using MusicDbContext _context = new();
-            return _context.Musics.Where(c=>!c.IsDeleted).SingleOrDefault(c => c.Id == musicId);
+
+            return _context.Musics.Include(c=>c.Album).Where(c => !c.IsDeleted).FirstOrDefault(c => c.Id == musicId);
         }
 
         //public Music GetFeatureMusic()
@@ -50,6 +41,18 @@ namespace DataAccess.Concrete.EntityFrameWork
         {
             using MusicDbContext context = new();
             return context.Musics.Where(c => !c.IsDeleted).ToList();
+        }
+
+        public  void UpdateMusic(int id, Music music)
+        {
+                using MusicDbContext context = new();
+                music.Id = id;
+                var singleCourse =  GetMusicById(id);
+
+                //context.RemoveRange(singleCourse.AlbumsId);
+                //context.Specifactions.RemoveRange(singleCourse.CourseSpecifactions.Where(c=>c.CourseId==id).ToArray());
+                context.Musics.Update(music);
+                context.SaveChanges();
         }
     }
 }

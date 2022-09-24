@@ -27,6 +27,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
