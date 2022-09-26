@@ -44,6 +44,12 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.MusicVideo)
         </dd>
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsFeatured)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsFeatured)
+        </dd>
     </dl>
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |

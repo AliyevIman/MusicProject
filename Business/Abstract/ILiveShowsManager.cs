@@ -11,5 +11,6 @@ namespace Business.Abstract
     {
         List<LiveShows> GetLiveShowsWithMusician();
         Task<LiveShows> GetById(int id);
+        void Create(LiveShows liveShow);
     }
 }

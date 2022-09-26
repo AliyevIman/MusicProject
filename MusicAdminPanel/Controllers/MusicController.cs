@@ -11,13 +11,15 @@ namespace MusicAdminPanel.Controllers
     public class MusicController : Controller
     {
         private readonly IMusicManager _manager;
+        private readonly IAlbumManager _album;
         private readonly IWebHostEnvironment _env;
 
 
-        public MusicController(IMusicManager manager, IWebHostEnvironment env)
+        public MusicController(IMusicManager manager, IWebHostEnvironment env, IAlbumManager album)
         {
             _manager = manager;
             _env = env;
+            _album = album;
         }
 
 
@@ -48,6 +50,7 @@ namespace MusicAdminPanel.Controllers
         // GET: MusicController/Create
         public ActionResult Create()
         {
+            ViewBag.Albums =_album.GetAll();
             return View();
         }
 
@@ -110,22 +113,27 @@ namespace MusicAdminPanel.Controllers
         // POST: MusicController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, [Bind("Id,name,photo,musicUrl,musicVideo,authorName")] Music music)
+        public ActionResult Edit(int id, [Bind("Id,Name,MusicUrl,MusicVideo,AuthorName,Photo")] Music music)
         {
             if (id != music.Id)
             {
                 return NotFound();
             }
-
+            if (ModelState.IsValid)
+            {
                 try
                 {
-                    _manager.Udpdate(id,music);
+                    _manager.Udpdate(id, music);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     return View(music);
                 }
                 return RedirectToAction(nameof(Index));
+
+            }
+            return View(music);
+              
             //return View(music);
         }
 

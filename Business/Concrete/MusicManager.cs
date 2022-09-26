@@ -35,6 +35,11 @@ namespace Business.Concrete
             }
         }
 
+        public List<Music> GetAll()
+        {
+            return _dal.GetAll();
+        }
+
         public List<Music> GetAllMusics()
         {
             return _dal.GetMusicsAll();

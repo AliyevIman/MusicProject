@@ -18,6 +18,12 @@ namespace Business.Concrete
             _dal = dal;
         }
 
+        public void Create(LiveShows liveShow)
+        {
+            
+             _dal.Create(liveShow);
+        }
+
         public Task<LiveShows> GetById(int id)
         {
             if (id == null) return null;

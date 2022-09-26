@@ -10,6 +10,7 @@ namespace Business.Abstract
     public interface IMusicManager
     {
         List<Music> GetMusics();
+        List<Music> GetAll();
         List<Music> GetAllMusics();
         void AddMusic(Music music);
         Music GetMusicById(int musicId);

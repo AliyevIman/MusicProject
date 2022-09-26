@@ -18,6 +18,13 @@ namespace DataAccess.Concrete.EntityFrameWork
             context.Musics.Add(music);
             context.SaveChanges();
         }
+
+        public List<Music> GetAll()
+        {
+            using MusicDbContext _context = new();
+            return _context.Musics.Where(c => !c.IsDeleted).Include(c => c.Album).ToList();
+        }
+
         public Music GetMusicById(int? musicId)
         {
             using MusicDbContext _context = new();

@@ -12,6 +12,13 @@ namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfLiveShowsDal : EFEntityRepositoryBase<MusicDbContext, LiveShows>, ILiveShowsDal
     {
+        public void Create(LiveShows liveShow)
+        {
+            using MusicDbContext context = new();
+            context.LiveShows.Add(liveShow);
+            context.SaveChanges();
+        }
+
         public async Task<LiveShows> GetById(int id)
         {
             using MusicDbContext context = new();

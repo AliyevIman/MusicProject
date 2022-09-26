@@ -28,45 +28,53 @@
             <th>
                 @Html.DisplayNameFor(model => model.MusicUrl)
             </th>
-          @*  <th>
-                @Html.DisplayNameFor(model => model.WorkArea)
+            @*  <th>
+            @Html.DisplayNameFor(model => model.WorkArea)
             </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Photo)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFeatured)
+
+            </th>
         </tr>
     </thead>
     <tbody>
-      
-@foreach (var item in Model) {
-    @if(item.IsDeleted==false){
-           <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                    <audio controls>
-                        <source src="@Html.DisplayFor(modelItem => item.MusicUrl)" type="audio/ogg">
-                        <source src="@Html.DisplayFor(modelItem => item.MusicUrl)" type="audio/mpeg">
-                    </audio> 
-            </td>
-          @*  <td>
-                @Html.DisplayFor(modelItem => item.WorkArea)
+
+        @foreach (var item in Model)
+        {
+            @if (item.IsDeleted == false)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        <audio controls>
+                            <source src="@Html.DisplayFor(modelItem => item.MusicUrl)" type="audio/ogg">
+                            <source src="@Html.DisplayFor(modelItem => item.MusicUrl)" type="audio/mpeg">
+                        </audio>
+                    </td>
+                    @*  <td>
+            @Html.DisplayFor(modelItem => item.WorkArea)
             </td>*@
-            <td>
-               <img src="@Html.DisplayFor(modelItem => item.Photo)" width="100"/>
-            </td>
-           <td>
-                @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |*@
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                
-            </td>
-        </tr>
+                    <td>
+                        <img src="@Html.DisplayFor(model=> item.Photo)" width="100" />
+                    </td>
+                    <td>
+                        <input disabled="disabled" checked="@item.IsFeatured" type="checkbox" />
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                    </td>
+                </tr>
+            }
         }
-    }
     </tbody>
 
-     
+
 </table>

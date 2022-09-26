@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bgw75/H+tXgF2i6wf5o+IxRdwNk72BPA7TG6TSRrtQM=",
+  "Hash": "cNFELUXNhNxIjdM3MjyZl/zIzKGlyl8bEHDnPVP9hbU=",
   "Source": "MusicAdminPanel",
   "BasePath": "_content/MusicAdminPanel",
   "Mode": "Default",
@@ -17918,6 +17918,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\3b5bf34c-fa3e-49e4-b1d9-00440eb2603bXpertAkula.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/3b5bf34c-fa3e-49e4-b1d9-00440eb2603bXpertAkula.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\3b5bf34c-fa3e-49e4-b1d9-00440eb2603bXpertAkula.jpg"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\870e7719-3d72-4572-b5b1-a754752cf684Paster.jpg",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -18953,6 +18970,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\252c88e5-14a6-40fe-be42-087bfeaff5f8Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "music/252c88e5-14a6-40fe-be42-087bfeaff5f8Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\music\\252c88e5-14a6-40fe-be42-087bfeaff5f8Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3"
     },
     {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\4c5eeda3-936e-4256-b564-15555ed6a8f5Death_Grips_-_Get_Got_xmbupo.mp3",
