@@ -24,6 +24,16 @@ namespace Business.Concrete
              _dal.Create(liveShow);
         }
 
+        public void DeleteLive(int id)
+        {
+            var getMusic = _dal.Get(c => c.Id == id && !c.IsDeleted);
+            if (getMusic != null)
+            {
+                getMusic.IsDeleted = true;
+                _dal.Update(getMusic);
+            }
+        }
+
         public Task<LiveShows> GetById(int id)
         {
             if (id == null) return null;
@@ -33,6 +43,11 @@ namespace Business.Concrete
         public List<LiveShows> GetLiveShowsWithMusician()
         {
             return _dal.GetLiveShowsMusicans();
+        }
+
+        public void Update(int id, LiveShows liveShow)
+        {
+             _dal.UpdateLive(id, liveShow);
         }
     }
 }

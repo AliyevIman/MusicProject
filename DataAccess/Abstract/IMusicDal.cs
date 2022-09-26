@@ -12,7 +12,6 @@ namespace DataAccess.Abstract
     {
         List<Music> GetMusics();
         List<Music> GetAll();
-
         List<Music> GetMusicsAll();
         void Create(Music music);
         Music GetMusicById(int? musicId);

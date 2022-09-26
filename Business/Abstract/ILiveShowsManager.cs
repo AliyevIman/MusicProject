@@ -12,5 +12,8 @@ namespace Business.Abstract
         List<LiveShows> GetLiveShowsWithMusician();
         Task<LiveShows> GetById(int id);
         void Create(LiveShows liveShow);
+        void Update(int id,LiveShows liveShow);
+        void DeleteLive(int id);
+
     }
 }

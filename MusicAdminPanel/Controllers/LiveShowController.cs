@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Entites.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MusicAdminPanel.Controllers
 {
@@ -8,9 +10,9 @@ namespace MusicAdminPanel.Controllers
     {
         // GET: LiveShowController
         private readonly ILiveShowsManager _manager;
-        private readonly IMusicianManager _musician;
+        private readonly IMusicianShowManager _musician;
         private readonly IWebHostEnvironment _env;
-        public LiveShowController(ILiveShowsManager manager, IMusicianManager musician, IWebHostEnvironment env)
+        public LiveShowController(ILiveShowsManager manager, IMusicianShowManager musician, IWebHostEnvironment env)
         {
             _manager = manager;
             _musician = musician;
@@ -20,7 +22,7 @@ namespace MusicAdminPanel.Controllers
        
         public ActionResult Index()
         {
-            ViewBag.Musician = _musician.GetAllMusician();
+            ViewBag.Musician = _musician.GetMusicianShows();
             var data = _manager.GetLiveShowsWithMusician();
             return View(data);
         }
@@ -45,64 +47,96 @@ namespace MusicAdminPanel.Controllers
         // GET: LiveShowController/Create
         public ActionResult Create()
         {
+            ViewBag.Musician = _musician.GetMusicianShows();
             return View();
         }
 
         // POST: LiveShowController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(LiveShows liveShow ,IFormFile Photo)
         {
             try
             {
+                if (Photo != null)
+                {
+                    string filename = Guid.NewGuid() + Photo.FileName;
+                    string rootPath = Path.Combine(_env.WebRootPath, "images");
+                    string photoPath = Path.Combine(rootPath, filename);
+                    using FileStream fl = new(photoPath, FileMode.Create);
+                    Photo.CopyTo(fl);
+                    liveShow.Photo = "/images/" + filename;
+                }
+              
+                //_context.Add(music);
+                //await _context.SaveChangesAsync();
+                _manager.Create(liveShow);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch (Exception)
             {
-                return View();
+
+                return View(liveShow);
+
             }
+            return View(liveShow);
         }
 
         // GET: LiveShowController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<IActionResult> Edit(int id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var live = await _manager.GetById(id);
+            if (live == null)
+            {
+                return NotFound();
+            }
+            return View(live);
         }
 
         // POST: LiveShowController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(int id,IFormFile Photo, LiveShows live)
         {
-            try
+            if (Photo != null)
             {
-                return RedirectToAction(nameof(Index));
+                string FileName = Guid.NewGuid() + Photo.FileName;
+                string RootPath = Path.Combine(_env.WebRootPath, "images");
+                string PhotoPath = Path.Combine(RootPath, FileName);
+                using FileStream fl = new (PhotoPath, FileMode.Create);
+                Photo.CopyTo(fl);
+                live.Photo = "/images/" + FileName;
             }
-            catch
-            {
-                return View();
-            }
+            _manager.Update(id,live);
+            return RedirectToAction("Index");
         }
 
         // GET: LiveShowController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            return View();
+            if (id == null) return NotFound();
+            var data = await _manager.GetById(id);
+            if (data == null) return NotFound();
+            return View(data);
         }
 
         // POST: LiveShowController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int Id, IFormCollection collection)
         {
-            try
+            if (Id == null)
             {
-                return RedirectToAction(nameof(Index));
+                return NotFound();
             }
-            catch
-            {
-                return View();
-            }
+
+            _manager.DeleteLive(Id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

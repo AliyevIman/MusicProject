@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfLiveShowsDal : EFEntityRepositoryBase<MusicDbContext, LiveShows>, ILiveShowsDal
+
     {
         public void Create(LiveShows liveShow)
         {
@@ -34,6 +35,18 @@ namespace DataAccess.Concrete.EntityFrameWork
                 .ThenInclude(x=>x.Musicians)
                  .Where(c => !c.IsDeleted)
                 .ToList();
+        }
+
+        public void UpdateLive(int id, LiveShows liveShow)
+        {
+            using MusicDbContext context = new();
+            liveShow.Id = id;
+            var singleCourse = GetById(id);
+
+            //context.RemoveRange(singleCourse.AlbumsId);
+            //context.Specifactions.RemoveRange(singleCourse.CourseSpecifactions.Where(c=>c.CourseId==id).ToArray());
+            context.LiveShows.Update(liveShow);
+            context.SaveChanges();
         }
     }
 }

@@ -13,6 +13,8 @@ namespace DataAccess.Abstract
         List<LiveShows> GetLiveShowsMusicans();
         Task<LiveShows> GetById(int id);
         void Create(LiveShows liveShow);
+        void UpdateLive(int id, LiveShows liveShow);
+
 
     }
 }
