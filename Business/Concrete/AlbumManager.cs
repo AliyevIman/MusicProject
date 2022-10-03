@@ -18,12 +18,17 @@ namespace Business.Concrete
             _dal = dal;
         }
 
+        public void Create(Albums album)
+        {
+            _dal.Create(album);
+        }
+
         public List<Albums> GetAll()
         {
             return _dal.GetAlbumsWithMusic();
         }
 
-        public List<Albums> GetMuicById(int albumId)
+        public Albums GetMuicById(int albumId)
         {
             return _dal.GetAlbumsById(albumId);
         }

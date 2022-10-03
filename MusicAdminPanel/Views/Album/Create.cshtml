@@ -1,0 +1,63 @@
+﻿@model Albums
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Album</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RecordLable" class="control-label"></label>
+                <input type="text" asp-for="RecordLable" class="form-control" />
+                <span asp-validation-for="RecordLable" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RealizeDate" class="control-label"></label>
+                <input type="datetime-local" asp-for="RealizeDate" class="form-control" />
+                <span asp-validation-for="RealizeDate" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="IsFeatured" class="control-label"></label>
+                <input type="checkbox" asp-for="IsFeatured" class="form-control" />
+                <span asp-validation-for="IsFeatured" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsNew" class="control-label"></label>
+                <input type="checkbox" asp-for="IsNew" class="form-control" />
+                <span asp-validation-for="IsNew" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlbumPhoto" class="control-label"></label>
+                <input type="file" asp-for="AlbumPhoto" class="form-control" />
+                <span asp-validation-for="AlbumPhoto" class="text-danger"></span>
+            </div>
+            <select name="MusicianId" class="form-group">
+                @foreach (var musician in ViewBag.Musician as List<Musician>)
+                {
+                    <option value="@musician.Id">@musician.Name</option>
+                }
+            </select>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form> 
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

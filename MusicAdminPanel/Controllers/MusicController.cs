@@ -27,7 +27,7 @@ namespace MusicAdminPanel.Controllers
         public ActionResult  Index()
         {
             var data = _manager.GetMusics();
-            return  View( data);
+            return  View(data);
         }
 
         // GET: MusicController/Details/5

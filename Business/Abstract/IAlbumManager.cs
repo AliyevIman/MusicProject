@@ -10,7 +10,8 @@ namespace Business.Abstract
     public interface IAlbumManager
     {
         List<Albums> GetAll();
-        List<Albums> GetMuicById(int albumId);
+        Albums GetMuicById(int albumId);
         Task<Albums> GetMusicByAlbum(int albumId);
+        void Create (Albums album);
     }
 }

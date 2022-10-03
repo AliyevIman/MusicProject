@@ -6,7 +6,7 @@ using DataAccess.Concrete.EntityFrameWork;
 using Entites.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
+ 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,8 +16,8 @@ builder.Services.AddControllersWithViews();
 //    opt.UseSqlServer(builder.Configuration.GetConnectionString("default"));
 //});
 
-//builder.Services.AddIdentity<User, IdentityRole>()
-//    .AddEntityFrameworkStores<MusicDbContext>();
+//builder.Services.AddDefaultIdentity<User>().AddRoles<IdentityRole>();
+
 //Scopeds
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
@@ -36,10 +36,11 @@ builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
 builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
 builder.Services.AddScoped<TokenManager>();
+
 //builder.Services.ConfigureApplicationCookie(options =>
 //{
-//    options.LoginPath = "/dashboard/auth/login";
-//    options.AccessDeniedPath = "/dashboard/auth/login";
+//    options.LoginPath = "/Controllers/Auth/login";
+//    options.AccessDeniedPath = "/Controllers/Auth/login";
 //});
 
 

@@ -12,10 +12,17 @@ namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfAlbumsDal : EFEntityRepositoryBase<MusicDbContext, Albums>, IAlbumsDal
     {
-        public List<Albums> GetAlbumsById(int albumId)
+        public void Create(Albums album)
+        {
+            using MusicDbContext context = new();
+            context.Albums.Add(album);
+            context.SaveChanges();
+        }
+
+        public Albums GetAlbumsById(int albumId)
         {
             using MusicDbContext _context = new();
-            return _context.Albums.Where(c => c.Id == albumId).Include(c => c.Musician).ThenInclude(x => x.Musics).ThenInclude(s => s.Music).ToList();
+            return _context.Albums.Include(c => c.Musician).ThenInclude(x => x.Musics).ThenInclude(s => s.Music).FirstOrDefault(c => c.Id == albumId);
         }
 
         public List<Albums> GetAlbumsWithMusic()

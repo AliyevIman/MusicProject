@@ -90,9 +90,10 @@
                                 <img src="/adminFront/assets/images/svg-icon/pages.svg" class="img-fluid" alt="dashboard"><span>Pages</span><i class="feather icon-chevron-right pull-right"></i>
                             </a>
                             <ul class="vertical-submenu">
-                                     <li><a asp-controller="Music" asp-action="Index"> <span>Music</span></a> </li>
+                                <li><a asp-controller="Music" asp-action="Index"> <span>Music</span></a> </li>
                                 <li><a asp-controller="LiveShow" asp-action="Index"> <span>Live Shows</span></a> </li>
-                                <li><a href="#">Hospital</a></li>
+                                <li><a asp-controller="Album" asp-action="Index"> <span>Album</span></a> </li>
+
                                 <li><a href="#">Crypto</a></li>
                                 <li><a href="#">School</a></li>
                             </ul>
@@ -270,6 +271,7 @@
                 <!-- End row -->
             </div>
             <!-- End Topbar -->
+
             <!-- Start Breadcrumbbar -->
             <div class="breadcrumbbar">
                 <div class="row align-items-center">
@@ -291,6 +293,8 @@
                     </div>
                 </div>
             </div>
+
+
             <!-- End Breadcrumbbar -->
             <!-- Start Contentbar -->
             <div class="contentbar">
@@ -300,6 +304,7 @@
                     <div class="col-md-12 col-lg-12 col-xl-12">
                         <div class="text-center mt-3 mb-5">
                             @RenderBody()
+
                         </div>
                     </div>
                     <!-- End col -->
@@ -307,6 +312,7 @@
                 <!-- End row -->
             </div>
             <!-- End Contentbar -->
+
             <!-- Start Footerbar -->
             <div class="footerbar">
                 <footer class="footer">
@@ -317,6 +323,7 @@
         </div>
         <!-- End Rightbar -->
     </div>
+
     <!-- End Containerbar -->
     <!-- Start js -->
     <script src="/adminFront/assets/js/jquery.min.js"></script>

@@ -11,7 +11,8 @@ namespace DataAccess.Abstract
     public interface IAlbumsDal :IEntityRepository<Albums>
     {
         List<Albums> GetAlbumsWithMusic();
-        List<Albums> GetAlbumsById( int albumId);
+        Albums GetAlbumsById( int albumId);
         Task<Albums> GetMusicByAlbum( int albumId);
+        void Create (Albums album); 
     }
 }
