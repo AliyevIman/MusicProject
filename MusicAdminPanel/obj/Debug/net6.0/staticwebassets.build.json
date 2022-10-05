@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d1NrKymIPfZ9BWwmP7E0yDtg1nwtjdzQjZPae02CCvo=",
+  "Hash": "qYx3R1zoAFurSc6cfouFCC98vS/Xw7umXvKQZ3/nVwo=",
   "Source": "MusicAdminPanel",
   "BasePath": "_content/MusicAdminPanel",
   "Mode": "Default",
@@ -17952,6 +17952,23 @@
       "OriginalItemSpec": "wwwroot\\images\\1c3216ed-e325-44d9-8ba6-e891dba17c21XpertAkula.jpg"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\1c6abe35-8d59-46d1-9ad0-50ce4f8e4a78XpertAkula.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/1c6abe35-8d59-46d1-9ad0-50ce4f8e4a78XpertAkula.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\1c6abe35-8d59-46d1-9ad0-50ce4f8e4a78XpertAkula.jpg"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\1d820cbe-0b09-46a6-aaf9-b51a224fa785heijanbiasik.jfif",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -18224,6 +18241,23 @@
       "OriginalItemSpec": "wwwroot\\images\\afb4877a-0557-40c0-8962-a30928a408b2XpertAkula.jpg"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\b40a477e-d3e6-4ace-8703-631a1dfdae2cheijanbiasik.jfif",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/b40a477e-d3e6-4ace-8703-631a1dfdae2cheijanbiasik.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b40a477e-d3e6-4ace-8703-631a1dfdae2cheijanbiasik.jfif"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\c528ac11-530d-4b1b-b122-99f43edf75d2Paster.jpg",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -18256,6 +18290,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\e4636805-f871-43b5-aad1-c43e1bcf923eheijanbiasik.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\e8c650fc-df50-49f7-9b19-d2744e812d72heijanbiasik.jfif",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/e8c650fc-df50-49f7-9b19-d2744e812d72heijanbiasik.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e8c650fc-df50-49f7-9b19-d2744e812d72heijanbiasik.jfif"
     },
     {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\fda9870f-7407-43ae-9ed5-cd4b45026b69XpertAkula.jpg",

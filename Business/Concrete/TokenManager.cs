@@ -1,4 +1,7 @@
-﻿using Entites.Concrete;
+﻿using DataAccess.Concrete.EntityFrameWork;
+using Entites.Concrete;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -26,6 +29,8 @@ namespace Business.Concrete
                      new Claim("Firstname", user.Firstname.ToString()),
                      new Claim("Lastname", user.Lastname.ToString()),
                      new Claim("Email", user.Email.ToString()),
+                      new Claim(ClaimTypes.Name, user.Firstname),
+                     new Claim(ClaimTypes.Role, "Artist")
                 };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
@@ -40,6 +45,10 @@ namespace Business.Concrete
 
             var writeToken = new JwtSecurityTokenHandler().WriteToken(token);
             return writeToken.ToString();
+        }
+        public void Edit(string userId,User user)
+        {
+           
         }
     }
 }

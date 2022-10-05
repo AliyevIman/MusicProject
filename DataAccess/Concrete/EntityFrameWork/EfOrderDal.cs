@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFrameWork
 {
-    public class EfOrderDal : EFEntityRepositoryBase<MusicDbContext, Order>, IOrderDal
+    public class EfOrderDal : IEntityRepository<MusicDbContext, Order>, IOrderDal
     {
         public List<Order> GetAllOrders()
         {

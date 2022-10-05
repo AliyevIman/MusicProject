@@ -158,3 +158,10 @@ C:\Users\imane\Desktop\MusicProject\MusicProject\obj\Debug\net6.0\refint\MusicPr
 C:\Users\imane\Desktop\MusicProject\MusicProject\obj\Debug\net6.0\MusicProject.pdb
 C:\Users\imane\Desktop\MusicProject\MusicProject\obj\Debug\net6.0\MusicProject.genruntimeconfig.cache
 C:\Users\imane\Desktop\MusicProject\MusicProject\obj\Debug\net6.0\ref\MusicProject.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\IdentityServer4.Storage.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\Scrutor.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\imane\Desktop\MusicProject\MusicProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

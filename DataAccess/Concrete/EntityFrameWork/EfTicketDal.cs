@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFrameWork
 {
-    public class EfTicketDal : EFEntityRepositoryBase<MusicDbContext, Ticket>, ITicketDal
+    public class EfTicketDal : IEntityRepository<MusicDbContext, Ticket>, ITicketDal
     {
         public async Task<Ticket> GetById(int id)
         {
