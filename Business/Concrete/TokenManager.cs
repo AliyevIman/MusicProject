@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Cryptography;
+
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -25,12 +28,11 @@ namespace Business.Concrete
         public string GenerateToken(User user)
         {
             var claims = new[]{
-                     new Claim("UserId", user.Id.ToString()),
-                     new Claim("Firstname", user.Firstname.ToString()),
-                     new Claim("Lastname", user.Lastname.ToString()),
+                     new Claim("Id", user.Id.ToString()),
+                     new Claim("Firstname", user.FullName.ToString()),
                      new Claim("Email", user.Email.ToString()),
-                      new Claim(ClaimTypes.Name, user.Firstname),
-                     new Claim(ClaimTypes.Role, "Artist")
+                     new Claim(ClaimTypes.Name, user.FullName),
+
                 };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
@@ -45,10 +47,18 @@ namespace Business.Concrete
 
             var writeToken = new JwtSecurityTokenHandler().WriteToken(token);
             return writeToken.ToString();
+            //-------
+            //using SHA256 chSha256 = SHA256.Create();
+            //byte[] bytes = chSha256.ComputeHash(Encoding.UTF8.GetBytes(pass));
+
+            //StringBuilder sp = new StringBuilder();
+            //for (int i = 0; i < bytes.Length; i++)
+            //{
+            //    sp.Append(bytes[i].ToString("x2"));
+            //}
+            //return sp.ToString();
+
         }
-        public void Edit(string userId,User user)
-        {
-           
-        }
+       
     }
 }

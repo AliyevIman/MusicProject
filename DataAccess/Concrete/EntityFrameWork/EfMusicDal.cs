@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFrameWork
 {
-    public class EfMusicDal : IEntityRepository<MusicDbContext, Music>, IMusicDal
+    public class EfMusicDal : EfEntityRepositoryBase<MusicDbContext, Music>, IMusicDal
     {
         public void Create(Music music)
         {

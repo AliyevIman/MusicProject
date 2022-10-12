@@ -27,7 +27,7 @@ namespace MusicProject.Controllers
             return map;
         }
         [HttpGet("albums/{albumId}")]
-        public List<ALbumDTO> GetMusicByID( int? albumId)
+        public List<ALbumDTO>? GetMusicByID( int? albumId)
         {
             if (!albumId.HasValue) return null;
             var list = _manager.GetMuicById(albumId.Value);

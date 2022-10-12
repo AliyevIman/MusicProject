@@ -13,6 +13,5 @@ namespace Entites.Concrete
         public int Stock { get; set; }
         public long Price{ get; set; }
         public long Discount { get; set; }
-        public List<Order> Orders { get; set; }
     }
 }

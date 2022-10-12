@@ -8,7 +8,16 @@ namespace Entites.DTO
 {
     public class UserDTO
     {
-        public string Firstname { get; set; } = null!;
-        public string Lastname { get; set; } = null!;
+ 
+        public UserDTO(int id, string fullname, string email)
+        {
+            Id = id;
+            FullName = fullname;
+            Email = email;
+        }
+        public int Id { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Token { get; set; }
     }
 }

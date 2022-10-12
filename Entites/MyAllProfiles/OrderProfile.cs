@@ -13,7 +13,6 @@ namespace Entites.MyAllProfiles
     {
         public OrderProfile()
         {
-            CreateMap<Order, OrderTicketDTO>();
         }
     }
 }

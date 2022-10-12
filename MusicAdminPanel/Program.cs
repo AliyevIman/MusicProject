@@ -21,8 +21,6 @@ builder.Services.AddControllersWithViews();
 //Scopeds
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
-builder.Services.AddScoped<IOrderDal, EfOrderDal>();
-builder.Services.AddScoped<IOrderManager, OrderManager>();
 builder.Services.AddScoped<IAlbumsDal, EfAlbumsDal>();
 builder.Services.AddScoped<IAlbumManager, AlbumManager>();
 builder.Services.AddScoped<ITicketDal, EfTicketDal>();

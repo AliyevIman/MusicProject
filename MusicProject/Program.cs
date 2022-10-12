@@ -1,108 +1,113 @@
-//using Business.Abstract;
-//using Business.Concret;
-//using DataAccess.Abstract;
-//using DataAccess.Concrete;
-//using DataAccess.Concrete.EntityFrameWork;
 using Business.Abstract;
 using Business.Concrete;
+using Core.Security.Hasing;
+using Core.Security.Models;
+using Core.Security.TokenHandler;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFrameWork;
-using Entites.Concrete;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Filters;
 using System.Text;
-using System.Text.Json.Serialization;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
-ConfigurationManager configuration = builder.Configuration;
 
 // Add services to the container.
 
 
-builder.Services.AddControllers().AddJsonOptions(opt =>
-opt.JsonSerializerOptions.WriteIndented = true);
+builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JWTConfig"));
+
+
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(option =>
+{
+    var key = Encoding.ASCII.GetBytes("aqwertyuiopsadfghjklxcvbnmasdfghjkwertyukj");
+    var issuer = builder.Configuration["JWTConfig:Issuer"];
+    var audience = builder.Configuration["JWTConfig:Audience"];
+    option.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        RequireExpirationTime = true,
+        ValidIssuer = issuer,
+        ValidAudience = audience
+    };
+});
+
+
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    options.SerializerSettings
+    .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddDbContext<MusicDbContext>();
-//User
-builder.Services.AddSwaggerGen(options =>
-{
-    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
-    {
-        Description = "Standard Authorization header using the Bearer scheme (\"bearer {token}\")",
-        In = ParameterLocation.Header,
-        Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey
-    });
-
-    options.OperationFilter<SecurityRequirementsOperationFilter>();
-});
-builder.Services.AddIdentity<User, IdentityRole>()
-    .AddEntityFrameworkStores<MusicDbContext>();
-//Scopeds
+builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
-builder.Services.AddScoped<IOrderDal, EfOrderDal>();
-builder.Services.AddScoped<IOrderManager, OrderManager>();
+
 builder.Services.AddScoped<IAlbumsDal, EfAlbumsDal>();
 builder.Services.AddScoped<IAlbumManager, AlbumManager>();
+
 builder.Services.AddScoped<ITicketDal, EfTicketDal>();
 builder.Services.AddScoped<ITicketManager, TicketManager>();
+
 builder.Services.AddScoped<IMusiciansShowsDal, EfMusicianShowDal>();
 builder.Services.AddScoped<IMusicianShowManager, MusicianShowsManager>();
+
 builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
 builder.Services.AddScoped<IMusicianManager, MusicianManager>();
+
 builder.Services.AddScoped<ILiveShowsDal, EfLiveShowsDal>();
 builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
+
 builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
-builder.Services.AddScoped<IUserManager, UserService>();
 
+builder.Services.AddScoped<IRoleDal, EfRoleDal>();
+builder.Services.AddScoped<IRoleManager, RoleManager>();
+
+builder.Services.AddScoped<IUserRoleDal, EfUserRoleDal>();
+builder.Services.AddScoped<IUserRoleManager, UserRoleManager>();
+
+builder.Services.AddScoped<IAuthDal, EfAuthDal>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
+
+builder.Services.AddScoped<HashingHandler>();
+
+
+builder.Services.AddScoped<TokenGenerator>();
+builder.Services.AddScoped<JWTConfig>();
 builder.Services.AddScoped<TokenManager>();
-//Scopeds
+
+
+
+builder.Services.AddScoped<JWTConfig>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-    options.JsonSerializerOptions.WriteIndented = true;
-});
-
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(
-        name: "_myAllowOrigins",
-        builder =>
+    options.AddPolicy(MyAllowSpecificOrigins,
+        policy =>
         {
-            builder
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .WithMethods("PUT", "DELETE", "GET");
-        }
-     );
+            policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+        });
 });
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-.AddJwtBearer(opt =>
-{
-    opt.RequireHttpsMetadata = false;
-    opt.SaveToken = true;
-    opt.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidAudience = builder.Configuration["Jwt:Audience"],
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        IssuerSigningKey = new SymmetricSecurityKey
-        (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-    };
-});
+
 
 
 var app = builder.Build();
@@ -114,14 +119,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.UseStaticFiles();
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
-app.UseCors("_myAllowOrigins");
 
 
 app.MapControllers();

@@ -17,22 +17,18 @@ namespace DataAccess.Concrete.EntityFrameWork
         {
             base.OnConfiguring(option);
             option.UseSqlServer(@"Server=DESKTOP-0LV8GT4\SQLEXPRESS;Database=FinalMusicDB;Trusted_Connection=true;MultipleActiveResultSets=True");
-
         }
         public DbSet<Music> Musics { get; set; }
         public DbSet<Musician> Musicians{ get; set; }
         public DbSet<Albums> Albums { get; set; }
 
-        //public DbSet<Genre> Genres{ get; set; }   
+        //public DbSet<Genre> Genres{ get; set; }           
         public DbSet<LiveShows> LiveShows { get; set; }
         public DbSet<MusicianShows> MusicianShows { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-        public DbSet<Order> Orders { get; set; }
         public DbSet<User> Users { get; set; } = null!;
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            builder.Entity<IdentityUser>().ToTable("User");
-        }
+        public DbSet<Role> Role { get; set; } 
+        public DbSet<UserRole> UserRole { get; set; } 
+
     }
 }

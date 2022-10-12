@@ -22,9 +22,9 @@ namespace Entites.Concrete
         public string AuthorName { get; set; }
         public bool IsFeatured { get; set; }
         public bool IsDeleted { get; set; }
-        public string UserId { get; set; }
-        [ForeignKey(nameof(UserId))]
-        public IdentityUser User { get; set; }
+        //public string UserId { get; set; }
+        //[ForeignKey(nameof(UserId))]
+        //public IdentityUser User { get; set; }
         public  List<MusiciansMusic>? Musicians{ get; set; }
         [ForeignKey("AlbumsId")]
         public int? AlbumsId { get; set; }
