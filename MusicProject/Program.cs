@@ -1,56 +1,26 @@
 using Business.Abstract;
 using Business.Concrete;
-using Core.Security.Hasing;
-using Core.Security.Models;
-using Core.Security.TokenHandler;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFrameWork;
+using Entites;
+using Entites.Concrete;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
-builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JWTConfig"));
-
-
-builder.Services.AddAuthentication(x =>
-{
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(option =>
-{
-    var key = Encoding.ASCII.GetBytes("aqwertyuiopsadfghjklxcvbnmasdfghjkwertyukj");
-    var issuer = builder.Configuration["JWTConfig:Issuer"];
-    var audience = builder.Configuration["JWTConfig:Audience"];
-    option.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(key),
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        RequireExpirationTime = true,
-        ValidIssuer = issuer,
-        ValidAudience = audience
-    };
-});
-
-
 builder.Services.AddControllers()
-    .AddNewtonsoftJson(options =>
-    options.SerializerSettings
-    .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-);
-
+    .AddJsonOptions(opt => opt.JsonSerializerOptions.WriteIndented = true);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<MusicDbContext>();
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<MusicDbContext>();
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
 
@@ -72,43 +42,39 @@ builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
 builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
 
-builder.Services.AddScoped<IRoleDal, EfRoleDal>();
-builder.Services.AddScoped<IRoleManager, RoleManager>();
-
-builder.Services.AddScoped<IUserRoleDal, EfUserRoleDal>();
-builder.Services.AddScoped<IUserRoleManager, UserRoleManager>();
-
-builder.Services.AddScoped<IAuthDal, EfAuthDal>();
-builder.Services.AddScoped<IAuthManager, AuthManager>();
-
-builder.Services.AddScoped<HashingHandler>();
-
-
-builder.Services.AddScoped<TokenGenerator>();
-builder.Services.AddScoped<JWTConfig>();
 builder.Services.AddScoped<TokenManager>();
 
-
-
-builder.Services.AddScoped<JWTConfig>();
-
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(MyAllowSpecificOrigins,
-        policy =>
+    options.AddPolicy(
+        name: "_myAllowOrigins",
+        builder =>
         {
-            policy
-            .AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
-        });
+            builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .WithMethods("PUT", "DELETE", "GET");
+        }
+     );
 });
 
-
-
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(opt =>
+{
+    opt.RequireHttpsMetadata = false;
+    opt.SaveToken = true;
+    opt.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        IssuerSigningKey = new SymmetricSecurityKey
+        (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
 
 var app = builder.Build();
 
@@ -119,17 +85,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-app.UseStaticFiles();
 app.UseHttpsRedirection();
-
-app.UseCors(MyAllowSpecificOrigins);
 
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-
+app.UseCors("_myAllowOrigins");
 
 app.MapControllers();
 

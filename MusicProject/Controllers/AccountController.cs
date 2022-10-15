@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Business.Abstract;
 using Business.Concrete;
-using Core.Security.Hasing;
-using Core.Security.TokenHandler;
 using Entites.Concrete;
 using Entites.DTO;
 using IdentityServer4.Models;
@@ -15,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
+using NuGet.Common;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -27,169 +26,167 @@ namespace MusicProject.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
+        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly UserManager<User> _userManager;
         private readonly IMapper _mapper;
         private readonly IConfiguration _config;
         private readonly TokenManager _tokenManager;
-        private readonly HashingHandler _hashingHandler;
-        private readonly IRoleManager _role;
-        private readonly IAuthManager _authManager;
-        private readonly TokenGenerator _tokenGenerator;
+        protected readonly ILogger<AccountController> _logger;
 
-        public AccountController(IMapper mapper, IConfiguration config, TokenManager tokenManager, IRoleManager role, IAuthManager authManager, HashingHandler hashingHandler, TokenGenerator tokenGenerator)
+        public AccountController(UserManager<User> userManager, IMapper mapper, IConfiguration config, TokenManager tokenManager, RoleManager<IdentityRole> roleManager, ILogger<AccountController> logger)
         {
+            _userManager = userManager;
             _mapper = mapper;
             _config = config;
             _tokenManager = tokenManager;
-            _role = role;
-            _authManager = authManager;
-            _hashingHandler = hashingHandler;
-            _tokenGenerator = tokenGenerator;
+            this.roleManager = roleManager;
+            _logger = logger;
         }
 
+        // GET: api/<AccountController>
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
+        // GET api/<AccountController>/5
+        [HttpGet("{id}")]
+        public string Get(int id)
+        {
+            return "value";
+        }
 
         // POST api/<AccountController>
-        [HttpGet("getall")]
-        public ActionResult <string> GetMe()
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Your secret key value"));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-            var permClaims = new List<Claim>();
-            permClaims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-            permClaims.Add(new Claim("user", "Artist"));
-
-            //Create Security Token object by giving required parameters    
-            var token = new JwtSecurityToken("your-issuer.com",
-                                                "your-audience.com",
-                                                permClaims,
-                                                expires: DateTime.Now.AddDays(1),
-                                                signingCredentials: credentials);
-            var jwtToken = new JwtSecurityTokenHandler().WriteToken(token);
-            var jwt = new JwtSecurityTokenHandler().ReadJwtToken(jwtToken);
-            string user = jwt.Claims.First(c => c.Type == "user").Value;
-            return Ok(user);
-        }
-
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserDTO model)
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserDTO userDTO)
         {
-            //var user = _mapper.Map<User>(userDTO);
-            //user.Email = userDTO.Email;
-            //var result = await _userManager.CreateAsync(user, userDTO.Password);
-            //if (!result.Succeeded)
-            //{
-            //    return BadRequest();
-            //}
-            //return Ok(new { status = 201, message = "user created" });  
-            var user = _authManager.GetUserByEmail(model.Email);
-
-            if (user != null)
+            var user = _mapper.Map<User>(userDTO);
+            user.UserName = userDTO.Email;
+            var result = await _userManager.CreateAsync(user, userDTO.Password);
+            if (!result.Succeeded)
             {
-                return Ok(new { status = 201, message = "Email is exist." });
+                return BadRequest();
             }
-            _authManager.Register(model);
-
-            return Ok(new { status = 200, message = "Okey" });
+            return Ok(new { status = 201, message = "user created" });
         }
 
         // POST api/<AccountController>
         [HttpPost("login")]
-        public async Task<object> LoginUser( LoginUserDTO model)
+        public async Task<IActionResult> LoginUser([FromBody] LoginUserDTO userDTO)
         {
-
-            //var findUser = await _userManager.FindByEmailAsync(userDTO.Email);
-
-            //var checkPassword = await _userManager.CheckPasswordAsync(findUser, userDTO.Password);
-
-            //if (findUser != null && checkPassword)
-            //{
-            //    var role = _role.GetRole(user.Id);
-            //    var resultUser = new UserDTO(user.Id, user.FullName, user.Email);
-            //   resultUser.Token = _tokenManager.GenerateToken(findUser,role.Name);
-            //    return Ok(new { email = findUser.Email, token = resultUser });
-            //}
-
-            var user = _authManager.Login(model.Email);
-            if (user == null) return Ok(new { status = 404, message = "Bele bir istifadeci tapilmadi." });
-
-            if (user.Email == model.Email && user.Password == _hashingHandler.PasswordHash(model.Password))
+            var findUser = await _userManager.FindByEmailAsync(userDTO.Email);
+            var checkPassword = await _userManager.CheckPasswordAsync(findUser, userDTO.Password);
+            if (findUser != null && checkPassword)
             {
 
-                var role = _role.GetRole(user.Id);
-                var resultUser = new UserDTO(user.Id, user.FullName, user.Email);
-                resultUser.Token = _tokenGenerator.Token(user, role.Name);
+                var myToken = _tokenManager.GenerateToken(findUser);
 
-                return Ok(new { status = 200, message = resultUser });
+                return Ok(new { email = findUser.Email, token = myToken });
             }
 
-            return Ok(new { status = 404, message = "Email ve ya sifre sehfdi." });
+            return Unauthorized();
 
         }
-        [Authorize(Roles = "Admin")]
-        [HttpGet("allusers")]
-        public List<User> GetUsers()
+        //var identity = new ClaimsIdentity(IdentityConstants.ApplicationScheme);
+        //identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, findUser.Id));
+        //identity.AddClaim(new Claim(ClaimTypes.Name, findUser.UserName));
+        //await HttpContext.SignInAsync(IdentityConstants.ApplicationScheme,
+        //new ClaimsPrincipal(identity));
+
+        // PUT api/<AccountController>/5
+        [HttpPost("AddRole")]
+        public async Task<IActionResult> CreateRole(string roleName)
         {
-            return _authManager.GetUsers();
+            var roleExist = await roleManager.RoleExistsAsync(roleName);
+            if (!roleExist)
+            {
+                //create the roles and seed them to the database: Question 1
+                var roleResult = await roleManager.CreateAsync(new IdentityRole(roleName));
+
+                if (roleResult.Succeeded)
+                {
+                    _logger.LogInformation(1, "Roles Added");
+                    return Ok(new { result = $"Role {roleName} added successfully" });
+                }
+                else
+                {
+                    _logger.LogInformation(2, "Error");
+                    return BadRequest(new { error = $"Issue adding the new {roleName} role" });
+                }
+            }
+
+            return BadRequest(new { error = "Role already exist" });
         }
 
-        [HttpGet("getuserbyrole/{userId}")]
-        public async Task<Role> GetUserByRole(int userId)
+        // DELETE api/<AccountController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
         {
-            return _role.GetRole(userId);
         }
-        [Authorize]
-        [HttpGet("getbyemail")]
-        public async Task<object> GetByEmail()
+
+        [HttpPost]
+        [Route("AddUserToRole")]
+        public async Task<IActionResult> AddUserToRole( string email, string roleName)
         {
-            var _bearer_token = Request.Headers[HeaderNames.Authorization].ToString().Replace("Bearer ", "");
-            var handler = new JwtSecurityTokenHandler();
-            var jwtSecurityToken = handler.ReadJwtToken(_bearer_token);
-            var email = jwtSecurityToken.Claims.FirstOrDefault(x => x.Type == "email").Value;
+            var user = await _userManager.FindByEmailAsync(email);
 
-            var user = _authManager.GetUserByEmail(email);
-            var result = new UserDTO(user.Id, user.FullName, user.Email);
-            return Ok(result);
+            if (user != null)
+            {
+                var result = await _userManager.AddToRoleAsync(user, roleName);
+
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation(1, $"User {user.Email} added to the {roleName} role");
+                    return Ok(new { email = user.Email, roleName=roleName });
+
+                }
+                else
+                {
+                    _logger.LogInformation(1, $"Error: Unable to add user {user.Email} to the {roleName} role");
+                    return BadRequest(new { error = $"Error: Unable to add user {user.Email} to the {roleName} role" });
+                }
+            }
+
+            // User doesn't exist
+            return BadRequest(new { error = "Unable to find user" });
         }
-        //private string CreateToken (User user)
-        //{
-        //    List<Claim> claims = new List<Claim>
-        //    {
-        //        new Claim(ClaimTypes.Name, user.FullName),
-        //        new Claim(ClaimTypes.Role, "Artist"),
-        //    };
+        [HttpGet]
+        [Route("GetUserRoles")]
+        public async Task<IActionResult> GetUserRoles(string email)
+        {
+            // Resolve the user via their email
+            var user = await _userManager.FindByEmailAsync(email);
+            // Get the roles for the user
+            var roles = await _userManager.GetRolesAsync(user);
+            return Ok(roles);
+        }
 
-        //    var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(
-        //        _config.GetSection("Jwt:key").Value));
-        //    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        // Remove User to role
+        [HttpPost]
+        [Route("RemoveUserFromRole")]
+        public async Task<IActionResult> RemoveUserFromRole(string email, string roleName)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
 
-        //    var token = new JwtSecurityToken(
-        //        claims: claims,
-        //        expires: DateTime.Now.AddDays(1),
-        //        signingCredentials: creds);
+            if (user != null)
+            {
+                var result = await _userManager.RemoveFromRoleAsync(user, roleName);
 
-        //    var jwt = new JwtSecurityTokenHandler().WriteToken(token);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation(1, $"User {user.Email} removed from the {roleName} role");
+                    return Ok(new { result = $"User {user.Email} removed from the {roleName} role" });
+                }
+                else
+                {
+                    _logger.LogInformation(1, $"Error: Unable to removed user {user.Email} from the {roleName} role");
+                    return BadRequest(new { error = $"Error: Unable to removed user {user.Email} from the {roleName} role" });
+                }
+            }
 
-        //    return jwt;
-
-        //}
-        //private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        //{
-        //    using (var hmac = new HMACSHA512())
-        //    {
-        //        passwordSalt = hmac.Key;
-        //        passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-        //    }
-        //}
-
-        //private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
-        //{
-        //    using (var hmac = new HMACSHA512(passwordSalt))
-        //    {
-        //        var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-        //        return computedHash.SequenceEqual(passwordHash);
-        //    }
-        //}
-
+            // User doesn't exist
+            return BadRequest(new { error = "Unable to find user" });
+        }
     }
 }
 

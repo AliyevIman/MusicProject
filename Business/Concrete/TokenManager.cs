@@ -29,10 +29,9 @@ namespace Business.Concrete
         {
             var claims = new[]{
                      new Claim("Id", user.Id.ToString()),
-                     new Claim("Firstname", user.FullName.ToString()),
+                     new Claim("Firstname", user.Firstname.ToString()),
+                     new Claim("Lastname", user.Lastname.ToString()),
                      new Claim("Email", user.Email.ToString()),
-                     new Claim(ClaimTypes.Name, user.FullName),
-
                 };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
@@ -47,18 +46,7 @@ namespace Business.Concrete
 
             var writeToken = new JwtSecurityTokenHandler().WriteToken(token);
             return writeToken.ToString();
-            //-------
-            //using SHA256 chSha256 = SHA256.Create();
-            //byte[] bytes = chSha256.ComputeHash(Encoding.UTF8.GetBytes(pass));
-
-            //StringBuilder sp = new StringBuilder();
-            //for (int i = 0; i < bytes.Length; i++)
-            //{
-            //    sp.Append(bytes[i].ToString("x2"));
-            //}
-            //return sp.ToString();
-
         }
-       
+
     }
 }

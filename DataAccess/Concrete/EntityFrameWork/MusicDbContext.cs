@@ -27,8 +27,14 @@ namespace DataAccess.Concrete.EntityFrameWork
         public DbSet<MusicianShows> MusicianShows { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<User> Users { get; set; } = null!;
-        public DbSet<Role> Role { get; set; } 
-        public DbSet<UserRole> UserRole { get; set; } 
+        public DbSet<Role> Role { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.Entity<IdentityUser>().ToTable("User");
+            builder.Entity<IdentityRole>().ToTable("Roles");
+
+        }
 
     }
 }
