@@ -63,6 +63,8 @@ namespace MusicProject.Controllers
             var user = _mapper.Map<User>(userDTO);
             user.UserName = userDTO.Email;
             var result = await _userManager.CreateAsync(user, userDTO.Password);
+            await _userManager.AddToRoleAsync(user, "User");
+
             if (!result.Succeeded)
             {
                 return BadRequest();
@@ -126,7 +128,7 @@ namespace MusicProject.Controllers
 
         [HttpPost]
         [Route("AddUserToRole")]
-        public async Task<IActionResult> AddUserToRole( string email, string roleName)
+        public async Task<IActionResult> AddUserToRole(string email, string roleName)
         {
             var user = await _userManager.FindByEmailAsync(email);
 
@@ -137,7 +139,7 @@ namespace MusicProject.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, $"User {user.Email} added to the {roleName} role");
-                    return Ok(new { email = user.Email, roleName=roleName });
+                    return Ok(new { email = user.Email, roleName = roleName });
 
                 }
                 else
@@ -155,7 +157,13 @@ namespace MusicProject.Controllers
         public async Task<IActionResult> GetUserRoles(string email)
         {
             // Resolve the user via their email
+            if (email == null)
+            {
+                return NotFound(new { error = $"Error: Can not found  {email} about  to the  role" });
+
+            }
             var user = await _userManager.FindByEmailAsync(email);
+
             // Get the roles for the user
             var roles = await _userManager.GetRolesAsync(user);
             return Ok(roles);
@@ -187,6 +195,50 @@ namespace MusicProject.Controllers
             // User doesn't exist
             return BadRequest(new { error = "Unable to find user" });
         }
+
+
+        //////
+        private async Task<List<Claim>> GetValidClaims(IdentityUser user)
+        {
+            IdentityOptions _options = new IdentityOptions();
+            var claims = new List<Claim>
+            {
+                new Claim("Id", user.Id),
+                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(_options.ClaimsIdentity.UserIdClaimType, user.Id.ToString()),
+                new Claim(_options.ClaimsIdentity.UserNameClaimType, user.UserName),
+            };
+
+            var userClaims = await _userManager.GetClaimsAsync((User)user);
+            var userRoles = await _userManager.GetRolesAsync((User)user);
+            claims.AddRange(userClaims);
+            foreach (var userRole in userRoles)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, userRole));
+                var role = await roleManager.FindByNameAsync(userRole);
+                if (role != null)
+                {
+                    var roleClaims = await roleManager.GetClaimsAsync(role);
+                    foreach (Claim roleClaim in roleClaims)
+                    {
+                        claims.Add(roleClaim);
+                    }
+                }
+            }
+            return claims;
+        }
+
+        //// We need to update the GenerateJwtToken method
+        //var claims = await GetValidClaims(user);
+
+        //var tokenDescriptor = new SecurityTokenDescriptor
+        //{
+        //    Subject = new ClaimsIdentity(claims),
+        //    Expires = DateTime.UtcNow.AddMinutes(5), // 5-10 
+        //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        //};
     }
 }
 

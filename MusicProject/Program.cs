@@ -44,6 +44,7 @@ builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
 
 builder.Services.AddScoped<TokenManager>();
 
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCors(options =>
 {
