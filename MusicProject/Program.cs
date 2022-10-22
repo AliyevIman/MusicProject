@@ -76,6 +76,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
+builder.Services.AddAuthorization(optins =>
+{
+    optins.AddPolicy("Artist",
+        policy => policy.RequireRole("Artist"));
+});
 
 var app = builder.Build();
 

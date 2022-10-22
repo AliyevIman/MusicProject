@@ -2,6 +2,7 @@
 using Business.Abstract;
 using Entites.Concrete;
 using Entites.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,8 @@ namespace MusicProject.Controllers
             _map = map;
         }
         [HttpGet("GetMusic")]
+        [Authorize(Roles = "Artist")]
+
         public List<Music> GetMusic()
         {
             return _manager.GetMusics();

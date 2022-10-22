@@ -16,6 +16,5 @@ namespace Core
         void Delete(T entity);
         T Get(Expression<Func<T, bool>> filter = null);
         List<T> GetAll(Expression<Func<T,bool>>filter=null);
-
     }
 }

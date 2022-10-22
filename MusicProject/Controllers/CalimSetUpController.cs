@@ -1,7 +1,9 @@
 ﻿using DataAccess.Concrete.EntityFrameWork;
+using Entites.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
 namespace MusicProject.Controllers
@@ -12,13 +14,13 @@ namespace MusicProject.Controllers
     {
         private readonly MusicDbContext _context;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<User> _userManager;
         protected readonly ILogger<ClaimSetUpController> _logger;
 
         public ClaimSetUpController(
             MusicDbContext context,
             RoleManager<IdentityRole> roleManager,
-            UserManager<IdentityUser> userManager,
+            UserManager<User> userManager,
             ILogger<ClaimSetUpController> logger)
         {
             _logger = logger;
@@ -26,6 +28,8 @@ namespace MusicProject.Controllers
             _userManager = userManager;
             _context = context;
         }
+
+       
 
         [HttpGet]
         public async Task<IActionResult> GetAllClaims(string email)
