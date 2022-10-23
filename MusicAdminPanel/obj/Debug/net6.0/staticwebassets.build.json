@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qYx3R1zoAFurSc6cfouFCC98vS/Xw7umXvKQZ3/nVwo=",
+  "Hash": "+8HKI6aJH3Cch3SAeXV9uHtqlMLHzHwjAjAPNCyEHac=",
   "Source": "MusicAdminPanel",
   "BasePath": "_content/MusicAdminPanel",
   "Mode": "Default",
@@ -18054,6 +18054,23 @@
       "OriginalItemSpec": "wwwroot\\images\\5cddd723-e3a0-4fcb-8359-82013c4565d0heijanbiasik.jfif"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\75bebf46-4e19-4737-b817-4ad0aa45989bPaster.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/75bebf46-4e19-4737-b817-4ad0aa45989bPaster.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\75bebf46-4e19-4737-b817-4ad0aa45989bPaster.jpg"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\7822815d-520e-4677-b0ff-1f3de27aa7eaXpertAkula.jpg",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -19327,6 +19344,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\music\\252c88e5-14a6-40fe-be42-087bfeaff5f8Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\471bd5b6-f595-4ecd-a79e-c331e1aad399Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "music/471bd5b6-f595-4ecd-a79e-c331e1aad399Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\music\\471bd5b6-f595-4ecd-a79e-c331e1aad399Velet Ask - Sadece Anlayana (YUKLE).mp3.mp3"
     },
     {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\4c5eeda3-936e-4256-b564-15555ed6a8f5Death_Grips_-_Get_Got_xmbupo.mp3",

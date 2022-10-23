@@ -21,6 +21,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MusicDbContext>();
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<MusicDbContext>();
+
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
 

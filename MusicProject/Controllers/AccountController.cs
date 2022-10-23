@@ -180,7 +180,6 @@ namespace MusicProject.Controllers
                 {
                     _logger.LogInformation(1, $"User {user.Email} added to the {roleName} role");
                     return Ok(new { email = user.Email, roleName = roleName,token=myToken });
-
                 }
                 else
                 {

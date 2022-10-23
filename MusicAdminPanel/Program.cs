@@ -19,20 +19,31 @@ builder.Services.AddControllersWithViews();
 //builder.Services.AddDefaultIdentity<User>().AddRoles<IdentityRole>();
 
 //Scopeds
+builder.Services.AddDbContext<MusicDbContext>();
+builder.Services.AddIdentity<User, IdentityRole>()
+    .AddEntityFrameworkStores<MusicDbContext>();
+
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
+
 builder.Services.AddScoped<IAlbumsDal, EfAlbumsDal>();
 builder.Services.AddScoped<IAlbumManager, AlbumManager>();
+
 builder.Services.AddScoped<ITicketDal, EfTicketDal>();
 builder.Services.AddScoped<ITicketManager, TicketManager>();
+
 builder.Services.AddScoped<IMusiciansShowsDal, EfMusicianShowDal>();
 builder.Services.AddScoped<IMusicianShowManager, MusicianShowsManager>();
+
 builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
 builder.Services.AddScoped<IMusicianManager, MusicianManager>();
+
 builder.Services.AddScoped<ILiveShowsDal, EfLiveShowsDal>();
 builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
+
 builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
+
 builder.Services.AddScoped<TokenManager>();
 
 //builder.Services.ConfigureApplicationCookie(options =>

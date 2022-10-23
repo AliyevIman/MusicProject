@@ -13,7 +13,10 @@ namespace Entites.MyAllProfiles
     {
         public MusicProfile()
         {
-            CreateMap<Music, AlbumMusicDTO>();
+            CreateMap<Music, MusicAlbumDTO>().ForMember(
+                    dest => dest.AlbumName,
+                    opt => opt.MapFrom(src => src.Album.Name)
+                 );
             CreateMap<Music, MusicDTO>();
             CreateMap<Music, MusicListDTO>();
 
