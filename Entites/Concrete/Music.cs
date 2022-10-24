@@ -27,7 +27,7 @@ namespace Entites.Concrete
         //public IdentityUser User { get; set; }
         public  List<MusiciansMusic>? Musicians{ get; set; }
         [ForeignKey("AlbumsId")]
-        public int? AlbumsId { get; set; }
-        public Albums? Album { get; set; }
+        public int AlbumsId { get; set; }
+        public virtual Albums? Album { get; set; }
     }
 }

@@ -16,10 +16,6 @@ namespace Entites.DTO
         public string Photo { get; set; }
         public string AuthorName { get; set; }
         public bool IsFeatured { get; set; }
-        public bool IsDeleted { get; set; }
-        public string AlbumName { get; set; }
-        public int? AlbumId { get; set; }
-
-
+        public int AlbumsId { get; set; }
     }
 }

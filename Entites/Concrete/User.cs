@@ -8,10 +8,15 @@ using System.Threading.Tasks;
 
 namespace Entites.Concrete
 {
-    public class User :IdentityUser
+    public class User : IdentityUser
     {
         public string Firstname { get; set; } = null!;
         public string Lastname { get; set; } = null!;
-
+        //public string Biography { get; set; }
+        //public string Photo { get; set; }
+        //public bool IsNew { get; set; }
+        //public List<Albums> Albums { get; set; }
+        //public List<MusiciansMusic> Musics { get; set; }
+        //public List<MusicianShows> LiveShow { get; set; }
     }
 }

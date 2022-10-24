@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+8HKI6aJH3Cch3SAeXV9uHtqlMLHzHwjAjAPNCyEHac=",
+  "Hash": "zuUiIB/4UbskyN2zQ+4AyI49SST+p97PPD5dgj9IDWE=",
   "Source": "MusicAdminPanel",
   "BasePath": "_content/MusicAdminPanel",
   "Mode": "Default",
@@ -18088,6 +18088,23 @@
       "OriginalItemSpec": "wwwroot\\images\\7822815d-520e-4677-b0ff-1f3de27aa7eaXpertAkula.jpg"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\7a4b590d-f117-4abe-8868-27b68ab853aanegedeerr.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/7a4b590d-f117-4abe-8868-27b68ab853aanegedeerr.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\7a4b590d-f117-4abe-8868-27b68ab853aanegedeerr.jpg"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\8075fc3f-b276-4651-b60d-4cb84adde4f4XpertAkula.jpg",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -18188,6 +18205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\9c1bde27-27e1-4acb-ae0d-ceadb0e46b29heijanbiasik.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\a2a0e573-87ee-4d79-b762-3dce30e38ba5negedeerr.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/a2a0e573-87ee-4d79-b762-3dce30e38ba5negedeerr.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a2a0e573-87ee-4d79-b762-3dce30e38ba5negedeerr.jpg"
     },
     {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\a46e6614-5bfa-40ff-af1c-0d7efde4230aheijanbiasik.jfif",
@@ -19380,6 +19414,23 @@
       "OriginalItemSpec": "wwwroot\\music\\4c5eeda3-936e-4256-b564-15555ed6a8f5Death_Grips_-_Get_Got_xmbupo.mp3"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\9f42de82-3be1-44db-b1a1-5695e878d822Ate - Diğer Yarım mp3 indir.mp3",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "music/9f42de82-3be1-44db-b1a1-5695e878d822Ate - Diğer Yarım mp3 indir.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\music\\9f42de82-3be1-44db-b1a1-5695e878d822Ate - Diğer Yarım mp3 indir.mp3"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\afc41386-184c-4ae6-abae-3d0e36fbe59dDeath_Grips_-_Get_Got_xmbupo.mp3",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -19395,6 +19446,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\music\\afc41386-184c-4ae6-abae-3d0e36fbe59dDeath_Grips_-_Get_Got_xmbupo.mp3"
+    },
+    {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\fc055398-d69f-47a1-8b34-b67a84351ae0Ate - Diğer Yarım mp3 indir.mp3",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "music/fc055398-d69f-47a1-8b34-b67a84351ae0Ate - Diğer Yarım mp3 indir.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\music\\fc055398-d69f-47a1-8b34-b67a84351ae0Ate - Diğer Yarım mp3 indir.mp3"
     }
   ]
 }

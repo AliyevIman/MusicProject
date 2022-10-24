@@ -3,6 +3,7 @@ using Business.Abstract;
 using Entites.Concrete;
 using Entites.DTO;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,7 +41,7 @@ namespace MusicProject.Controllers
             JsonResult res = new(new { });
             try
             {
-                var _mapperMusic = _map.Map<MusicAlbumDTO, Music>(music);
+                var _mapperMusic = _map.Map<Music>(music);
                 _manager.AddMusic(_mapperMusic);
                 res.Value = new { status = 200, message = "music added successfully" };
             }
