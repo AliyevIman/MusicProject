@@ -43,12 +43,12 @@
                 <input type="file" asp-for="AlbumPhoto" class="form-control" />
                 <span asp-validation-for="AlbumPhoto" class="text-danger"></span>
             </div>
-            <select name="MusicianId" class="form-group">
+            @*<select name="MusicianId" class="form-group">
                 @foreach (var musician in ViewBag.Musician as List<Musician>)
                 {
                     <option value="@musician.Id">@musician.Name</option>
                 }
-            </select>
+            </select>*@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

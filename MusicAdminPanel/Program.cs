@@ -35,8 +35,8 @@ builder.Services.AddScoped<ITicketManager, TicketManager>();
 builder.Services.AddScoped<IMusiciansShowsDal, EfMusicianShowDal>();
 builder.Services.AddScoped<IMusicianShowManager, MusicianShowsManager>();
 
-builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
-builder.Services.AddScoped<IMusicianManager, MusicianManager>();
+//builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
+//builder.Services.AddScoped<IMusicianManager, MusicianManager>();
 
 builder.Services.AddScoped<ILiveShowsDal, EfLiveShowsDal>();
 builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();

@@ -10,9 +10,8 @@ namespace Entites.Concrete
     public class MusiciansMusic :IEntity
     {
         public int Id { get; set; }
-        public int? MusicianId { get; set; }
-        public virtual Musician? Musician { get; set; }
-        public int? MusicId { get; set; }
+        public string? UserId { get; set; }
+        public int MusicId { get; set; }
         public virtual Music? Music { get; set; }
     }
 }

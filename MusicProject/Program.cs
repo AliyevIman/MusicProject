@@ -22,6 +22,7 @@ builder.Services.AddDbContext<MusicDbContext>();
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<MusicDbContext>();
 
+
 builder.Services.AddScoped<IMusicDal, EfMusicDal>();
 builder.Services.AddScoped<IMusicManager, MusicManager>();
 
@@ -34,8 +35,8 @@ builder.Services.AddScoped<ITicketManager, TicketManager>();
 builder.Services.AddScoped<IMusiciansShowsDal, EfMusicianShowDal>();
 builder.Services.AddScoped<IMusicianShowManager, MusicianShowsManager>();
 
-builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
-builder.Services.AddScoped<IMusicianManager, MusicianManager>();
+//builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
+//builder.Services.AddScoped<IMusicianManager, MusicianManager>();
 
 builder.Services.AddScoped<ILiveShowsDal, EfLiveShowsDal>();
 builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
@@ -44,7 +45,6 @@ builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
 
 builder.Services.AddScoped<TokenManager>();
-
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCors(options =>

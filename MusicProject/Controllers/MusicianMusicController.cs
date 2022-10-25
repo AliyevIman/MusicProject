@@ -1,7 +1,9 @@
 ﻿using Business.Abstract;
+using DataAccess.Concrete.EntityFrameWork;
 using Entites.Concrete;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MusicProject.Controllers
 {
@@ -20,5 +22,15 @@ namespace MusicProject.Controllers
         {
             return _manager.GetAll();
         }
+        //[HttpGet("GetMusicMusician")]
+        //public List<User> GetMusicMusician()
+        //{
+        //    using MusicDbContext context = new();
+        //    //var a = context.Users.Include
+
+        //    //var map = _map.Map<List<MusicianToMusicDTO>>(list);
+        //    return a;
+
+        //}
     }
 }

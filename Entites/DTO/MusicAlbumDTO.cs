@@ -17,5 +17,6 @@ namespace Entites.DTO
         public string AuthorName { get; set; }
         public bool IsFeatured { get; set; }
         public int AlbumsId { get; set; }
+        public List<UserMusicDTO> Musicians { get; set; }
     }
 }

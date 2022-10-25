@@ -8,14 +8,14 @@ namespace MusicAdminPanel.Controllers
     public class AlbumController : Controller
     {
         // GET: AlbumController
-        private readonly IMusicianManager _musicianManager;
+        //private readonly IMusicianManager _musicianManager;
         private readonly IAlbumManager _manager;
         private readonly IWebHostEnvironment _env;
-        public AlbumController(IAlbumManager manager, IWebHostEnvironment env, IMusicianManager musicianManager)
+        public AlbumController(IAlbumManager manager, IWebHostEnvironment env)
         {
             _manager = manager;
             _env = env;
-            _musicianManager = musicianManager;
+            //_musicianManager = musicianManager;
         }
         public ActionResult Index()
         {
@@ -26,10 +26,10 @@ namespace MusicAdminPanel.Controllers
         // GET: AlbumController/Details/5
         public ActionResult Details(int Id)
         {
-        if (Id == null)
-            {
-                return NotFound();
-            }
+        //if (Id == null)
+            //{
+            //    return NotFound();
+            //}
 
             var music = _manager.GetMuicById(Id);
             if (music == null)
@@ -43,7 +43,7 @@ namespace MusicAdminPanel.Controllers
         // GET: AlbumController/Create
         public ActionResult Create()
         {
-            ViewBag.Musician = _musicianManager.GetAllMusician();   
+            //ViewBag.Musician = _musicianManager.GetAllMusician();   
             return View();
         }
 

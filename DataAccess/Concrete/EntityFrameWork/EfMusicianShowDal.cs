@@ -17,8 +17,8 @@ namespace DataAccess.Concrete.EntityFrameWork
             using MusicDbContext musicDbContext = new();
             return musicDbContext.MusicianShows
                 .Include(c => c.LiveShows)
-                .Include(i => i.Musicians)
-                .Where(x => x.LiveShowsId == x.LiveShows.Id)
+                //.Include(i => i.Musicians)
+                //.Where(x => x.LiveShowsId == x.LiveShows.Id)
                 .ToList();
         }
     }

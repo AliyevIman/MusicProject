@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfLiveShowsDal : EfEntityRepositoryBase<MusicDbContext, LiveShows>, ILiveShowsDal
-
     {
         public void Create(LiveShows liveShow)
         {
@@ -23,7 +22,8 @@ namespace DataAccess.Concrete.EntityFrameWork
         public async Task<LiveShows> GetById(int id)
         {
             using MusicDbContext context = new();
-            return await context.LiveShows.Include(c => c.Musicians).ThenInclude(c => c.Musicians).FirstOrDefaultAsync(s => s.Id == id && !s.IsDeleted);
+            return await context.LiveShows.Include(c => c.Musicians).FirstOrDefaultAsync(s => s.Id == id && !s.IsDeleted);
+            //.ThenInclude(c => c.Musicians)
 
         }
 
@@ -31,8 +31,7 @@ namespace DataAccess.Concrete.EntityFrameWork
         {
             using MusicDbContext context = new();
             return context.LiveShows
-                .Include(c=>c.Musicians)
-                .ThenInclude(x=>x.Musicians)
+                .Include(c => c.Musicians)
                  .Where(c => !c.IsDeleted)
                 .ToList();
         }

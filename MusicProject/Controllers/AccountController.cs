@@ -138,7 +138,7 @@ namespace MusicProject.Controllers
         [HttpPost("AddRole")]
         public async Task<IActionResult> CreateRole(string roleName)
         {
-            var roleExist = await roleManager.RoleExistsAsync(roleName);
+            var roleExist = await roleManager.RoleExistsAsync(roleName);    
             if (!roleExist)
             {
                 //create the roles and seed them to the database: Question 1

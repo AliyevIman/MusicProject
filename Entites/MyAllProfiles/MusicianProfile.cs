@@ -13,11 +13,11 @@ namespace Entites.MyAllProfiles
     {
         public MusicianProfile()
         {
-            CreateMap<Musician, MusicianLiveShowDTO>();
-            CreateMap<Musician, MusicianDTO>();
-            CreateMap<Musician, MusicianListDTO>();
-            CreateMap<Musician, MusicianToMusicDTO>();
-            CreateMap<Musician, MusicianWithMusicDTO>();
+            CreateMap<User, MusicianLiveShowDTO>();
+            CreateMap<User, MusicianDTO>();
+            CreateMap<User, MusicianListDTO>();
+            CreateMap<User, MusicianToMusicDTO>();
+            CreateMap<User, MusicianWithMusicDTO>();
         }
     }
 }

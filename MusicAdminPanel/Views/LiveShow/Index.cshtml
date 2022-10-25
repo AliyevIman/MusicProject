@@ -43,10 +43,10 @@
                 @Html.DisplayNameFor(model => model.Discount)
 
             </th>
-            <th>
+        @*    <th>
                 @Html.DisplayNameFor(model => model.Musicians)
 
-            </th>
+            </th>*@
         </tr>
     </thead>
     <tbody>
@@ -86,14 +86,14 @@
                         @Html.DisplayFor(modelItem => item.Discount)
 
                     </td>
-                    <td>
+                  @*  <td>
 
                         @foreach (var musician  in item.Musicians)
                         {
                               @musician.Musicians.Name
                         }
 
-                    </td>
+                    </td>*@
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                         <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

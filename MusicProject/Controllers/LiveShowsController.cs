@@ -33,5 +33,22 @@ namespace MusicProject.Controllers
             var map = _mapper.Map<LiveShowDTO>(list);
             return map;
         }
+        [HttpPost("AddLive")]
+        public async Task<JsonResult> Add(LiveShowDTO live)
+        {
+            JsonResult res = new(new { });
+            try
+            {
+                var _mapperMusic = _mapper.Map<LiveShows>(live);
+                _manager.Create(_mapperMusic);
+                res.Value = new { status = 200, message = "Live Show added successfully" };
+            }
+            catch (Exception e)
+            {
+                res.Value = new { status = 400, errors = e.Message };
+            }
+            return res;
+
+        }
     }
 }

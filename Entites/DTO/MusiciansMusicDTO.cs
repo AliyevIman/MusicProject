@@ -9,7 +9,7 @@ namespace Entites.DTO
 {
     public class MusiciansMusicDTO
     {
-       
+       public string UserId { get; set; }
         public int MusicId { get; set; }
         public virtual MusicAlbumDTO Music { get; set; }
     }

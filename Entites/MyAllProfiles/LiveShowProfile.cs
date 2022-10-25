@@ -14,7 +14,7 @@ namespace Entites.MyAllProfiles
         public LiveShowProfile()
         {
 
-            CreateMap<LiveShows, LiveShowDTO>().PreserveReferences();
+            CreateMap<LiveShowDTO, LiveShows >().ReverseMap();
         }
     }
 }

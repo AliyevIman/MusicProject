@@ -11,8 +11,7 @@ namespace Entites.Concrete
     {
         public int Id { get; set; }
         public int LiveShowsId { get; set; }
-        public  LiveShows LiveShows { get; set; }
-        public int MusiciansId { get; set; }
-        public Musician Musicians { get; set; }
+        public  LiveShows? LiveShows { get; set; }
+        public string UserId { get; set; }
     }
 }

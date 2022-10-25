@@ -19,7 +19,7 @@ namespace DataAccess.Concrete.EntityFrameWork
             option.UseSqlServer(@"Server=DESKTOP-0LV8GT4\SQLEXPRESS;Database=FinalMusicDB;Trusted_Connection=true;MultipleActiveResultSets=True");
         }
         public DbSet<Music> Musics { get; set; }
-        public DbSet<Musician> Musicians{ get; set; }
+        //public DbSet<Musician> Musicians{ get; set; }
         public DbSet<Albums> Albums { get; set; }
 
         //public DbSet<Genre> Genres{ get; set; }           

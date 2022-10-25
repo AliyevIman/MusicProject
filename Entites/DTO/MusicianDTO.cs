@@ -10,7 +10,7 @@ namespace Entites.DTO
     public class MusicianDTO
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Firstname { get; set; } = null!;
         public string Biography { get; set; }
         public string Photo { get; set; }
         public bool IsNew { get; set; }

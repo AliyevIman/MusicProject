@@ -21,8 +21,5 @@ namespace Entites.Concrete
         public DateTime AddedTime { get; set; }
         [ForeignKey(nameof(UserId))]
         public User User { get; set; }
-
-
-
     }
 }

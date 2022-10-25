@@ -18,10 +18,9 @@ namespace Entites.Concrete
         public string SongCount { get; set; }
         public bool IsNew { get; set; }
         public bool IsFeatured { get; set; }
-        public List<Music>? Music { get; set; }
-
-        [ForeignKey(nameof(Musician))]
-        public int MusicianId { get; set; }
-        public Musician Musician { get; set; }
+        public List<Music> Music { get; set; }
+        //
+        //[ForeignKey(nameof(User))]
+        public string UserId{ get; set; }
     }
 }

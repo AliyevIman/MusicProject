@@ -8,7 +8,7 @@ namespace Entites.DTO
 {
     public class MusicianToLiveShowDTO
     {
-        public MusicianLiveShowDTO Musicians { get; set; }
+        public string UserId { get; set; }
 
     }
 }
