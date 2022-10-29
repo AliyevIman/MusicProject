@@ -41,6 +41,24 @@ namespace MusicProject.Controllers
             var list = await _manager.GetMusicByAlbum(albumId.Value);
             var map = _mapper.Map<AlbumWithMusicDTO>(list);
             return map;
+
+        }
+        [HttpPost("AddAlbum")]
+        public async Task<JsonResult> Add(AlbumToUserDTO album)
+        {
+            JsonResult res = new(new { });
+            try
+            {
+                var _mapperMusic = _mapper.Map<Albums>(album);
+                _manager.Create(_mapperMusic);
+                res.Value = new { status = 200, message = "Album added successfully" };
+            }
+            catch (Exception e)
+            {
+                res.Value = new { status = 400, errors = e.Message };
+            }
+            return res;
+
         }
     }
 }

@@ -53,6 +53,22 @@ namespace MusicProject.Controllers
             return map;
         }
 
+        [HttpGet("GetMusicianAlbum/{userId}")]
+        public async Task<MusicianAlbumsDTO> GetAlbumMusician(string userId)
+        {
+            using MusicDbContext context = new();
+
+            //var list = await _manager.GetUsersInRoleAsync("Artist");
+            //var a = await _manager.FindByIdAsync(userId);
+            //var c= await _manager;
+            //var c = a.Musics;
+            var b = context.Users.Include(c => c.Albums).FirstOrDefault(c => c.Id == userId);
+
+            var map = _map.Map<MusicianAlbumsDTO>(b);
+            //return list.Where(c => c.Musics.Any()).ToList();
+            return map;
+        }
+
         //[HttpGet("GetAllMusician")]
         //public List<MusicianListDTO> GetAllMusician()
         //{

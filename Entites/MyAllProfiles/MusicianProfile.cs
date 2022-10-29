@@ -18,6 +18,8 @@ namespace Entites.MyAllProfiles
             CreateMap<User, MusicianListDTO>();
             CreateMap<User, MusicianToMusicDTO>();
             CreateMap<User, MusicianWithMusicDTO>();
+            CreateMap<User, MusicianAlbumsDTO>();
+
         }
     }
 }

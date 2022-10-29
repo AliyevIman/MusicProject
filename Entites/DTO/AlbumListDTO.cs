@@ -13,7 +13,8 @@ namespace Entites.DTO
         public DateTime RealizeDate { get; set; }
         public string RecordLable { get; set; }
         public string SongCount { get; set; }
-        public bool? IsNew { get; set; }
-        public bool? IsFeatured { get; set; }
+        //public bool? IsNew { get; set; }
+        //public bool? IsFeatured { get; set; }
+
     }
 }
