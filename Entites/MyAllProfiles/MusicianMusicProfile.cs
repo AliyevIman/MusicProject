@@ -16,8 +16,6 @@ namespace Entites.MyAllProfiles
             CreateMap<MusiciansMusic, MusiciansMusicDTO>();
 
             CreateMap<UserMusicDTO, MusiciansMusic >().ReverseMap();
-
-
         }
     }
 }

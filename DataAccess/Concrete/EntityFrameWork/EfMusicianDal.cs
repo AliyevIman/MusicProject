@@ -5,7 +5,7 @@
 //using Microsoft.EntityFrameworkCore;
 //using System;
 //using System.Collections.Generic;
-//using System.Linq;
+////using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
 
@@ -13,11 +13,11 @@
 //{
 //    public class EfMusicianDal : EfEntityRepositoryBase<MusicDbContext, IdentityUser>, IMusicianDal
 //    {
-//        //public List<Musician> GetAll()
-//        //{
-//        //    using MusicDbContext context = new();
-//        //    return context.Musicians.ToList();
-//        //}
+//        public List<Musician> GetAll()
+//        {
+//            using MusicDbContext context = new();
+//            return context.Musicians.ToList();
+//        }
 
 //        public List<Musician> GetMusicians()
 //        {
@@ -25,13 +25,13 @@
 //            return context..Include(c => c.Albums).Include(c => c.Musics).ThenInclude(x => x.Music).ToList();
 //        }
 
-//        //public List<Musician> GetMusicMusician()
-//        //{
-//        //    using MusicDbContext context = new();
-//        //    return context.Musicians
-//        //        .Include(c => c.Musics)
-//        //        .ThenInclude(s => s.Music)
-//        //        .ToList();
-//        //}
+//        public List<Musician> GetMusicMusician()
+//        {
+//            using MusicDbContext context = new();
+//            return context.Musics
+//          .Include(c => c.Musics)
+//                .ThenInclude(s => s.Music)
+//                .ToList();
+//        }
 //    }
 //}

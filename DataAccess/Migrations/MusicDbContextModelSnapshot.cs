@@ -63,7 +63,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Albums");
+                    b.ToTable("Albums", (string)null);
                 });
 
             modelBuilder.Entity("Entites.Concrete.LiveShows", b =>
@@ -112,7 +112,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("LiveShows");
+                    b.ToTable("LiveShows", (string)null);
                 });
 
             modelBuilder.Entity("Entites.Concrete.Music", b =>
@@ -159,7 +159,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("AlbumsId");
 
-                    b.ToTable("Musics");
+                    b.ToTable("Musics", (string)null);
                 });
 
             modelBuilder.Entity("Entites.Concrete.MusicianShows", b =>
@@ -182,7 +182,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("MusicianShows");
+                    b.ToTable("MusicianShows", (string)null);
                 });
 
             modelBuilder.Entity("Entites.Concrete.MusiciansMusic", b =>
@@ -205,7 +205,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("MusiciansMusic");
+                    b.ToTable("MusiciansMusic", (string)null);
                 });
 
             modelBuilder.Entity("Entites.Concrete.RefreshToken", b =>
@@ -247,7 +247,7 @@ namespace DataAccess.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("Entites.Concrete.Ticket", b =>
@@ -269,7 +269,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Tickets");
+                    b.ToTable("Tickets", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

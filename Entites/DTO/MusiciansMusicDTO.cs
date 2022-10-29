@@ -11,6 +11,6 @@ namespace Entites.DTO
     {
        public string UserId { get; set; }
         public int MusicId { get; set; }
-        public virtual MusicAlbumDTO Music { get; set; }
+        public virtual MusicListDTO Music { get; set; }
     }
 }

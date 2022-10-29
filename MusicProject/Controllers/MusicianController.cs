@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace MusicProject.Controllers
 {
@@ -34,19 +35,24 @@ namespace MusicProject.Controllers
             //var map = _map.Map<List<MusicianDTO>>(list);
             return Ok(list);
         }
-        [HttpGet("GetMusicMusician")]
-        public List<User> GetMusicMusician()
-        {
-            using MusicDbContext context = new();
-            var a= context.Users
-                .Include(c => c.Musics)
-                .ThenInclude(s => s.Music)
-                .ToList();
-            
-            //var map = _map.Map<List<MusicianToMusicDTO>>(list);
-            return a;
 
+        [HttpGet("GetMusicMusician/{userId}")]
+        public async Task<MusicianToMusicDTO> GetMusicMusician(string userId)
+        {
+
+            using MusicDbContext context = new();
+
+            //var list = await _manager.GetUsersInRoleAsync("Artist");
+            //var a = await _manager.FindByIdAsync(userId);
+            //var c= await _manager;
+            //var c = a.Musics;
+            var b = context.Users.Include(c => c.Musics).ThenInclude(c => c.Music).FirstOrDefault(c => c.Id == userId);
+
+            var map = _map.Map<MusicianToMusicDTO>(b);
+            //return list.Where(c => c.Musics.Any()).ToList();
+            return map;
         }
+
         //[HttpGet("GetAllMusician")]
         //public List<MusicianListDTO> GetAllMusician()
         //{
