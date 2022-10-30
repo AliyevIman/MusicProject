@@ -18,6 +18,6 @@ namespace Entites.DTO
         public bool? IsNew { get; set; }
         public bool? IsFeatured { get; set; }
         public List<MusicListDTO> Music { get; set; }
-        public MusicianListDTO Musician { get; set; }
+        public string UserId{ get; set; }
     }
 }

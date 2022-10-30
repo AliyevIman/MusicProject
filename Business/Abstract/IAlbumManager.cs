@@ -13,5 +13,6 @@ namespace Business.Abstract
         Albums GetMuicById(int albumId);
         Task<Albums> GetMusicByAlbum(int albumId);
         void Create (Albums album);
+        Task<Albums> GetAlbumMusic(string userId, int albumId);
     }
 }

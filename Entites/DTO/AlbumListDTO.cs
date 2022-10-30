@@ -8,6 +8,7 @@ namespace Entites.DTO
 {
     public class AlbumListDTO
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string AlbumPhoto { get; set; }
         public DateTime RealizeDate { get; set; }

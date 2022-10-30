@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using Entites.Concrete;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,12 @@ namespace Business.Concrete
         public void Create(Albums album)
         {
             _dal.Create(album);
+        }
+
+        public Task<Albums> GetAlbumMusic(string userId, int albumId)
+        {
+            if (userId == null&&albumId==null) return null;
+            return _dal.GetAlbumMusic(userId, albumId);
         }
 
         public List<Albums> GetAll()
