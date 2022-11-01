@@ -42,7 +42,6 @@ namespace DataAccess.Concrete.EntityFrameWork
         public async Task<Albums> GetAlbumMusic(string UserId,int albumId)
         {
             using MusicDbContext _context = new();
-
             return await _context.Albums.Include(c => c.Music).FirstOrDefaultAsync(c => c.UserId == UserId && c.Id == albumId);
         }
     }
