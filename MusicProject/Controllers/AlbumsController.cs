@@ -1,28 +1,35 @@
 ﻿using AutoMapper;
 using Business.Abstract;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Entites.Concrete;
 using Entites.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using dotenv.net;
 namespace MusicProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class AlbumsController : ControllerBase
     {
+        //public ImageUploadResult Upload(ImageUploadParams parameters);
+
         private readonly IAlbumManager _manager;
         private readonly IMapper _mapper;
-        public AlbumsController(IAlbumManager manager, IMapper mapper)
+        private readonly IWebHostEnvironment _environment;
+        private readonly IPictureSettings _pictureSettings;
+        public AlbumsController(IAlbumManager manager, IMapper mapper, IWebHostEnvironment environment, IPictureSettings pictureSettings)
         {
             _manager = manager;
             _mapper = mapper;
+            _environment = environment;
+            _pictureSettings = pictureSettings;
         }
 
         [HttpGet("GetAlbumMusic/{userId}/{albumId}")]
         public async Task<AlbumWithMusicDTO> GetAlbumMusic(string userId,int albumId)
         {
-
             var list = await _manager.GetAlbumMusic(userId, albumId);
             var map =_mapper.Map<AlbumWithMusicDTO>(list);
             return map;
@@ -69,7 +76,22 @@ namespace MusicProject.Controllers
             return res;
 
         }
+     
+        [HttpPost("uploadcover")]
+        public  string UploadPhotoAsync(IFormFile Image)
+        {
+            return _pictureSettings.Add(Image);
+            
+            //    Console.WriteLine(uploadResult.JsonObj);
 
+            //    //
+            //    string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            //    using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            //    {
+            //        await Image.CopyToAsync(fileStream);
+            //    }
+            //    return Ok(new { status = 200, message = path });
+        }
 
     }
 }

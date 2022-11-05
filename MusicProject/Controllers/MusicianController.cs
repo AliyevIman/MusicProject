@@ -17,13 +17,15 @@ namespace MusicProject.Controllers
     {
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<User> _manager;
+        private readonly IWebHostEnvironment _environment;
 
         private readonly IMapper _map;
-        public MusicianController(UserManager<User> manager, IMapper map, RoleManager<IdentityRole> roleManager)
+        public MusicianController(UserManager<User> manager, IMapper map, RoleManager<IdentityRole> roleManager, IWebHostEnvironment environment)
         {
             _manager = manager;
             _map = map;
             _roleManager = roleManager;
+            _environment = environment;
         }
         [HttpGet("GetAll")]
         public async Task<IActionResult> GetAll()
@@ -86,13 +88,30 @@ namespace MusicProject.Controllers
             //return list.Where(c => c.Musics.Any()).ToList();
             return map;
         }
-        //[HttpGet("GetAllMusician")]
-        //public List<MusicianListDTO> GetAllMusician()
-        //{
-        //    var list = _manager.GetAll();
-        //var map = _map.Map<List<MusicianListDTO>>(list);
-        //    return map;
-        //}
+        [HttpPost("uploadcover")]
+        public async Task<IActionResult> UploadPhotoAsync(IFormFile Image)
+        {
+            string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await Image.CopyToAsync(fileStream);
+            }
+            return Ok(new { status = 200, message = path });
+        }
 
+
+        [HttpPost("uploadimages")]
+        public async Task<IActionResult> UploadImagesAsync(IFormFile Image)
+        {
+            string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await Image.CopyToAsync(fileStream);
+            }
+
+            List<string> photos = new();
+
+            return Ok(new { status = 200, message = path });
+        }
     }
 }

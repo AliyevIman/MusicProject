@@ -15,10 +15,13 @@ namespace MusicProject.Controllers
     {
         private readonly IMusicManager _manager;
         private readonly IMapper _map;
-        public MusicController(IMusicManager manager, IMapper map)
+        private readonly IWebHostEnvironment _environment;
+
+        public MusicController(IMusicManager manager, IMapper map, IWebHostEnvironment environment)
         {
             _manager = manager;
             _map = map;
+            _environment = environment;
         }
         [HttpGet("GetMusic")]
         [Authorize(Roles = "Artist")]
@@ -94,6 +97,31 @@ namespace MusicProject.Controllers
 
             return res;
 
+        }
+        [HttpPost("uploadcover")]
+        public async Task<IActionResult> UploadPhotoAsync(IFormFile Image)
+        {
+            string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await Image.CopyToAsync(fileStream);
+            }
+            return Ok(new { status = 200, message = path });
+        }
+
+
+        [HttpPost("uploadimages")]
+        public async Task<IActionResult> UploadImagesAsync(IFormFile Image)
+        {
+            string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await Image.CopyToAsync(fileStream);
+            }
+
+            List<string> photos = new();
+
+            return Ok(new { status = 200, message = path });
         }
     }   
 }

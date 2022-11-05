@@ -279,3 +279,4 @@ C:\Users\imane\Desktop\MusicProject\MusicAdminPanel\obj\Debug\net6.0\MusicAdminP
 C:\Users\imane\Desktop\MusicProject\MusicAdminPanel\obj\Debug\net6.0\MusicAdminPanel.genruntimeconfig.cache
 C:\Users\imane\Desktop\MusicProject\MusicAdminPanel\obj\Debug\net6.0\ref\MusicAdminPanel.dll
 C:\Users\imane\Desktop\MusicProject\MusicAdminPanel\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\imane\Desktop\MusicProject\MusicAdminPanel\bin\Debug\net6.0\CloudinaryDotNet.dll

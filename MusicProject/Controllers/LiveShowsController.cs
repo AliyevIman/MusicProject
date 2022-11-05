@@ -13,10 +13,13 @@ namespace MusicProject.Controllers
     {
         private readonly ILiveShowsManager _manager;
         private readonly IMapper _mapper;
-        public LiveShowsController(ILiveShowsManager manager, IMapper mapper)
+        private readonly IWebHostEnvironment _environment;
+
+        public LiveShowsController(ILiveShowsManager manager, IMapper mapper, IWebHostEnvironment environment)
         {
             _manager = manager;
             _mapper = mapper;
+            _environment = environment;
         }
         [HttpGet("GetAll")]
         public List<LiveShowDTO> GetAll()
@@ -49,6 +52,31 @@ namespace MusicProject.Controllers
             }
             return res;
 
+        }
+        [HttpPost("uploadcover")]
+        public async Task<IActionResult> UploadPhotoAsync(IFormFile Image)
+        {
+            string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await Image.CopyToAsync(fileStream);
+            }
+            return Ok(new { status = 200, message = path });
+        }
+
+
+        [HttpPost("uploadimages")]
+        public async Task<IActionResult> UploadImagesAsync(IFormFile Image)
+        {
+            string path = "/files/" + Guid.NewGuid() + Image.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
+            {
+                await Image.CopyToAsync(fileStream);
+            }
+
+            List<string> photos = new();
+
+            return Ok(new { status = 200, message = path });
         }
     }
 }
