@@ -43,5 +43,7 @@ namespace Business.Concrete
             }
             return "";
         }
+   
+
     }
 }

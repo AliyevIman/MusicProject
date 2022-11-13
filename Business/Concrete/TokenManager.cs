@@ -50,22 +50,9 @@ namespace Business.Concrete
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var claims = await GetAllValidClaims(user);
 
-            //var claims = new[]{
-            //         new Claim("Id", user.Id.ToString()),
-            //         new Claim("Firstname", user.Firstname.ToString()),
-            //         new Claim("Lastname", user.Lastname.ToString()),
-            //         new Claim("Email", user.Email.ToString()),
-            // };
-
-            //var claims = GetAllClaims
+     
             var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-            //var token = new JwtSecurityToken(
-            //    _config["Jwt:Issuer"],
-            //    _config["Jwt:Audience"],
-            //    claims,
-            //    expires: DateTime.UtcNow.AddDays(10),
-            //    signingCredentials: signIn
-            //    );
+      
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
@@ -73,14 +60,12 @@ namespace Business.Concrete
                 SigningCredentials = signIn
             };
 
-            //var writeToken = new JwtSecurityTokenHandler().WriteToken(token);
             var Mytoken = jwtTokenHAndler.CreateToken(tokenDescriptor);
             var jwtToken = jwtTokenHAndler.WriteToken(Mytoken);
-            // refresh toekn
             var refreshToken = new RefreshToken
             {
                 AddedTime = DateTime.UtcNow,
-                Token = $"{RandomStringGenerator(25)}_{Guid.NewGuid()}", // Create a method genreate rasdnom string
+                Token = $"{RandomStringGenerator(25)}_{Guid.NewGuid()}",
                 UserId = user.Id,
                 IsRoveked = false,
                 IsUsed = false,

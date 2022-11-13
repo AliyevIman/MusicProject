@@ -15,78 +15,94 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\imane\Desktop\MusicProject\MusicAdminPanel
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Album/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cQ3JlYXRlLmNzaHRtbA==
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Album/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEFsYnVtXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Album/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cRGV0YWlscy5jc2h0bWw=
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Album/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEFsYnVtXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Album/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cSW5kZXguY3NodG1s
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Album/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEFsYnVtXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Album/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEFsYnVtXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Dashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEF1dGhcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/LiveShow/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2ZVNob3dcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXEhvbWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/LiveShow/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2ZVNob3dcRGVsZXRlLmNzaHRtbA==
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/LiveShow/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXExpdmVTaG93XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/LiveShow/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2ZVNob3dcRGV0YWlscy5jc2h0bWw=
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/LiveShow/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXExpdmVTaG93XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/LiveShow/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2ZVNob3dcRWRpdC5jc2h0bWw=
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/LiveShow/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXExpdmVTaG93XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/LiveShow/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2ZVNob3dcSW5kZXguY3NodG1s
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/LiveShow/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXExpdmVTaG93XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcQ3JlYXRlLmNzaHRtbA==
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/LiveShow/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXExpdmVTaG93XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcRGVsZXRlLmNzaHRtbA==
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Music/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXE11c2ljXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcRGV0YWlscy5jc2h0bWw=
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Music/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXE11c2ljXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcRWRpdC5jc2h0bWw=
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Music/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXE11c2ljXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Music/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVzaWNcSW5kZXguY3NodG1s
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Music/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXE11c2ljXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Music/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXE11c2ljXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-z1ct10ic4u
 
-[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-sz6eor0zyh
+[C:/Users/imane/Desktop/MusicProject/MusicAdminPanel/Areas/Dashboard/Views/Shared/_LayoutAuth.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRGFzaGJvYXJkXFZpZXdzXFNoYXJlZFxfTGF5b3V0QXV0aC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-64jwx34l13

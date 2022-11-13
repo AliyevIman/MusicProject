@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Business.Abstract;
+using Business.Settings;
 using Entites.Concrete;
 using Entites.DTO;
 using Microsoft.AspNetCore.Authorization;
@@ -16,12 +17,13 @@ namespace MusicProject.Controllers
         private readonly IMusicManager _manager;
         private readonly IMapper _map;
         private readonly IWebHostEnvironment _environment;
-
-        public MusicController(IMusicManager manager, IMapper map, IWebHostEnvironment environment)
+        private readonly IMusicSettings _musicSettings;
+        public MusicController(IMusicManager manager, IMapper map, IWebHostEnvironment environment, IMusicSettings musicSettings)
         {
             _manager = manager;
             _map = map;
             _environment = environment;
+            _musicSettings = musicSettings;
         }
         [HttpGet("GetMusic")]
         [Authorize(Roles = "Artist")]
@@ -98,30 +100,11 @@ namespace MusicProject.Controllers
             return res;
 
         }
-        [HttpPost("uploadcover")]
-        public async Task<IActionResult> UploadPhotoAsync(IFormFile Image)
+        [HttpPost("uploadMusic")]
+        public string UploadPhotoAsync(IFormFile Image)
         {
-            string path = "/files/" + Guid.NewGuid() + Image.FileName;
-            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
-            {
-                await Image.CopyToAsync(fileStream);
-            }
-            return Ok(new { status = 200, message = path });
+            return _musicSettings.AddMusic(Image);
         }
-
-
-        [HttpPost("uploadimages")]
-        public async Task<IActionResult> UploadImagesAsync(IFormFile Image)
-        {
-            string path = "/files/" + Guid.NewGuid() + Image.FileName;
-            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.Create))
-            {
-                await Image.CopyToAsync(fileStream);
-            }
-
-            List<string> photos = new();
-
-            return Ok(new { status = 200, message = path });
-        }
+ 
     }   
 }

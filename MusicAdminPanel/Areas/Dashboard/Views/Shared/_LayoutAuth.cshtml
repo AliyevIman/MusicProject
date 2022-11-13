@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Registration Page</title>
+
+    <link rel="shortcut icon" href="/adminFront/assets/images/favicon.ico">
+    <!-- Start css -->
+    <!-- Switchery css -->
+    <link href="/adminFront/assets/plugins/switchery/switchery.min.css" rel="stylesheet">
+    <link href="/adminFront/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/adminFront/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="/adminFront/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+    <link href="/adminFront/assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="hold-transition register-page">
+
+
+@RenderBody()
+
+    <script src="/adminFront/assets/js/jquery.min.js"></script>
+    <script src="/adminFront/assets/js/popper.min.js"></script>
+    <script src="/adminFront/assets/js/bootstrap.min.js"></script>
+    <script src="/adminFront/assets/js/modernizr.min.js"></script>
+    <script src="/adminFront/assets/js/detect.js"></script>
+    <script src="/adminFront/assets/js/jquery.slimscroll.js"></script>
+    <script src="/adminFront/assets/js/vertical-menu.js"></script>
+    <!-- Switchery js -->
+    <script src="/adminFront/assets/plugins/switchery/switchery.min.js"></script>
+    <!-- Core js -->
+    @await RenderSectionAsync("MyScripts",required:false)
+    <script src="/adminFront/assets/js/core.js"></script>
+</body>
+</html>

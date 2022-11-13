@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zuUiIB/4UbskyN2zQ+4AyI49SST+p97PPD5dgj9IDWE=",
+  "Hash": "Mzk9bDqCn9q7Kl9o9yG/eiVgGCjICL3Yd4DpkzDWaRw=",
   "Source": "MusicAdminPanel",
   "BasePath": "_content/MusicAdminPanel",
   "Mode": "Default",
@@ -18003,6 +18003,23 @@
       "OriginalItemSpec": "wwwroot\\images\\3b5bf34c-fa3e-49e4-b1d9-00440eb2603bXpertAkula.jpg"
     },
     {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\43fa4c0c-4ae3-46e0-8055-a153ad6abb36l_f33bbb97.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/43fa4c0c-4ae3-46e0-8055-a153ad6abb36l_f33bbb97.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\43fa4c0c-4ae3-46e0-8055-a153ad6abb36l_f33bbb97.jpg"
+    },
+    {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\45ecdf68-e5c8-4707-87f4-13bccf0b2586heijanbiasik.jfif",
       "SourceId": "MusicAdminPanel",
       "SourceType": "Discovered",
@@ -18052,6 +18069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\5cddd723-e3a0-4fcb-8359-82013c4565d0heijanbiasik.jfif"
+    },
+    {
+      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\758c3aeb-d58d-4b8b-b08f-1ee1b6357365l_f33bbb97.jpg",
+      "SourceId": "MusicAdminPanel",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\",
+      "BasePath": "_content/MusicAdminPanel",
+      "RelativePath": "images/758c3aeb-d58d-4b8b-b08f-1ee1b6357365l_f33bbb97.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\758c3aeb-d58d-4b8b-b08f-1ee1b6357365l_f33bbb97.jpg"
     },
     {
       "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\75bebf46-4e19-4737-b817-4ad0aa45989bPaster.jpg",

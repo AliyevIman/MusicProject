@@ -4,6 +4,7 @@ using DataAccess;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFrameWork;
 using Entites.Concrete;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
  
@@ -44,14 +45,30 @@ builder.Services.AddScoped<ILiveShowsManager, LiveShowsManager>();
 builder.Services.AddScoped<IMuscianMusicDal, EfMusicianMusicDal>();
 builder.Services.AddScoped<IMusicianMusicManager, MusicianMusicManager>();
 
+builder.Services.AddScoped<IPictureSettings, PictureManager>();
+
 builder.Services.AddScoped<TokenManager>();
 
-//builder.Services.ConfigureApplicationCookie(options =>
-//{
-//    options.LoginPath = "/Controllers/Auth/login";
-//    options.AccessDeniedPath = "/Controllers/Auth/login";
-//});
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/dashboard/auth/login";
+    options.AccessDeniedPath = "/dashboard/auth/login";
+    options.SlidingExpiration = true;
+    options.ExpireTimeSpan = TimeSpan.FromDays(2);
+});
+
+
+
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+//    .AddCookie(options =>
+//    {
+//        options.AccessDeniedPath = "/dashboard/auth/login";
+//        options.LoginPath = "/dashboard/auth/login";
+//        options.SlidingExpiration = true;
+//        options.ExpireTimeSpan = TimeSpan.FromDays(2);
+//    });
 
 
 var app = builder.Build();
@@ -70,15 +87,23 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
-
 //app.MapControllerRoute(
 //  name: "default",
 //  pattern: "{controller=Dashboard}/{action=Index}/{id?}"
 //);
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
+
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

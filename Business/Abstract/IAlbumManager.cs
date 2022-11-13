@@ -14,5 +14,7 @@ namespace Business.Abstract
         Task<Albums> GetMusicByAlbum(int albumId);
         void Create (Albums album);
         Task<Albums> GetAlbumMusic(string userId, int albumId);
+        void DeleteAlbum(int id);
+
     }
 }

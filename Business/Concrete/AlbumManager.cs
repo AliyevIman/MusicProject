@@ -24,6 +24,16 @@ namespace Business.Concrete
             _dal.Create(album);
         }
 
+        public void DeleteAlbum(int id)
+        {
+            var getMusic = _dal.Get(c => c.Id == id && !c.IsDeleted);
+            if (getMusic != null)
+            {
+                getMusic.IsDeleted = true;
+                _dal.Update(getMusic);
+            }
+        }
+
         public Task<Albums> GetAlbumMusic(string userId, int albumId)
         {
             if (userId == null&&albumId==null) return null;
