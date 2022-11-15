@@ -19,6 +19,8 @@ namespace Entites.MyAllProfiles
             CreateMap<User, MusicianToMusicDTO>();
             CreateMap<User, MusicianWithMusicDTO>();
             CreateMap<User, MusicianAlbumsDTO>();
+            CreateMap<User, EditMusicianDTO>().ReverseMap();
+
 
         }
     }

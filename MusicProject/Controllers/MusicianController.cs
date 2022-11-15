@@ -28,14 +28,17 @@ namespace MusicProject.Controllers
             _environment = environment;
         }
         [HttpGet("GetAll")]
-        public async Task<IActionResult> GetAll()
+        public async Task<List<MusicianListDTO>>  GetAll()
         {
+            
             var list = await _manager.GetUsersInRoleAsync("Artist");
+            var map =  _map.Map<List<MusicianListDTO>>(list);
+            
             //var list = _roleManager.Roles.Where(c => c. == X"Artist").ToList();
 
 
             //var map = _map.Map<List<MusicianDTO>>(list);
-            return Ok(list);
+            return map;
         }
 
         [HttpGet("GetMusicMusician/{userId}")]

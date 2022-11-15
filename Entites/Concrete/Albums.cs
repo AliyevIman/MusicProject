@@ -15,7 +15,6 @@ namespace Entites.Concrete
         public string? AlbumPhoto { get; set; }
         public DateTime RealizeDate { get; set; }
         public bool IsDeleted { get; set; }
-
         public string? RecordLable { get; set; } 
         public bool IsNew { get; set; }
         public bool IsFeatured { get; set; }

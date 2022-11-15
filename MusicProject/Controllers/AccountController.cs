@@ -36,7 +36,7 @@ namespace MusicProject.Controllers
         private readonly IConfiguration _config;
         private readonly TokenManager _tokenManager;
         protected readonly ILogger<AccountController> _logger;
-      
+
         public AccountController(UserManager<User> userManager, IMapper mapper, IConfiguration config, TokenManager tokenManager, RoleManager<IdentityRole> roleManager, ILogger<AccountController> logger)
         {
             _userManager = userManager;
@@ -47,7 +47,7 @@ namespace MusicProject.Controllers
             _logger = logger;
         }
 
-    
+
         // POST api/<AccountController>
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserDTO userDTO)
@@ -62,9 +62,9 @@ namespace MusicProject.Controllers
             var myToken = _tokenManager.GenerateToken(user);
             if (!result.Succeeded)
             {
-                return BadRequest(new { status = 401});
+                return BadRequest(new { status = 401 });
             }
-  
+
             return Ok(new { status = 201, token = myToken });
         }
 
@@ -78,16 +78,41 @@ namespace MusicProject.Controllers
                 var myToken = _tokenManager.GenerateToken(findUser);
 
 
-                return Ok(new {status=200, email = findUser.Email,token=myToken });
+                return Ok(new { status = 200, email = findUser.Email, token = myToken });
             }
-         
+
             return BadRequest();
 
         }
+
+        [HttpPut("Update/{userId}")]
+        public async Task<IActionResult> EditUser([FromBody] EditMusicianDTO userDTO, string userId)
+        {
+            var findUser = await _userManager.FindByIdAsync(userId);
+            var user = _mapper.Map<User>(userDTO);
+            if (findUser != null)
+            {
+                user.UserName = userDTO.Email;
+
+                var edit = await _userManager.UpdateAsync(user);
+                if (edit.Succeeded)
+                {
+                    return Ok(edit);
+
+                }
+                else
+                {
+                    return BadRequest(edit.Errors);
+                }
+            }
+            return BadRequest();
+
+        }
+
         [HttpPost("AddRole")]
         public async Task<IActionResult> CreateRole(string roleName)
         {
-            var roleExist = await roleManager.RoleExistsAsync(roleName);    
+            var roleExist = await roleManager.RoleExistsAsync(roleName);
             if (!roleExist)
             {
                 //create the roles and seed them to the database: Question 1
@@ -128,7 +153,7 @@ namespace MusicProject.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, $"User {user.Email} added to the {roleName} role");
-                    return Ok(new { email = user.Email, roleName = roleName,token=myToken });
+                    return Ok(new { email = user.Email, roleName = roleName, token = myToken });
                 }
                 else
                 {
@@ -185,7 +210,7 @@ namespace MusicProject.Controllers
         }
 
 
-  
+
     }
 }
 
