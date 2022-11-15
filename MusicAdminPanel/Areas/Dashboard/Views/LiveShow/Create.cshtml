@@ -13,7 +13,7 @@
 <div class="row">
     <div class="col-md-4">
 
-        <form asp-action="Create" enctype="multipart/form-data">
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -32,11 +32,7 @@
                 <input asp-for="Loacation" class="form-control" />
                 <span asp-validation-for="Loacation" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="TicketCount" class="control-label"></label>
-                <input asp-for="TicketCount" class="form-control" />
-                <span asp-validation-for="TicketCount" class="text-danger"></span>
-            </div>
+    
             <div class="form-group">
                 <label asp-for="Stock" class="control-label"></label>
                 <input asp-for="Stock" class="form-control" />
@@ -58,14 +54,12 @@
                 <span asp-validation-for="StartTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-  @*              <label asp-for="Photo" class="control-label"></label>
-                <input type="file" asp-for="Photo" class="form-control" />
-                <span asp-validation-for="Photo" class="text-danger"></span>*@
-                <label asp-for="Photo" class="control-label"></label>
-                    <input type="file"
-                           asp-for="Photo"
-                            />
-             
+
+                <label>Sekil 2</label>
+                <input asp-for=Photo id="imgurl" type="hidden" class="form-control">
+                <input id="PictureUrls" type="file" accept="image/*" class="form-control">
+                <img />
+
             </div>
 
             @*   <select name="MusicianId" class="form-group">
@@ -85,3 +79,29 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+@section MyScripts{
+    <script>
+        var pictureUrl=document.querySelectorAll("#PictureUrls")
+
+         $(pictureUrl).change(function ()
+         {
+             var pictures = this.files;
+            var PicsData = new FormData();
+             PicsData.append("Picture", pictures[0])
+             var img=$(this).parent().find('img')
+             var inp= $(this).parent().find('#imgurl')
+            $.ajax({
+                url: "/core/UploadPictures",
+                type: "POST",
+                data: PicsData,
+                dataType: "JSON",
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                 img.attr('src',res.value[0])
+                 inp.val(res.value[0])
+                }
+            })
+         })
+    </script>
+}

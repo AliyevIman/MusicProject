@@ -37,7 +37,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.IsFeatured)
-
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Album)
             </th>
         </tr>
     </thead>
@@ -65,6 +67,9 @@
                     </td>
                     <td>
                         <input disabled="disabled" checked="@item.IsFeatured" type="checkbox" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Album.Name)
                     </td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

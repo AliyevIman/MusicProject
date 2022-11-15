@@ -19,7 +19,6 @@ namespace Entites.Concrete
         public bool IsDeleted { get; set; }
         public long Price { get; set; }
         public long Discount { get; set; }
-        public string TicketCount { get; set; }
         public List<MusicianShows> Musicians { get; set; }
     }
 }

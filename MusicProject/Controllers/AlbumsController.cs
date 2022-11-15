@@ -7,6 +7,8 @@ using Entites.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using dotenv.net;
+using Core.Utilities.Results;
+
 namespace MusicProject.Controllers
 {
     [Route("api/[controller]")]
@@ -78,9 +80,9 @@ namespace MusicProject.Controllers
         }
      
         [HttpPost("uploadcover")]
-        public  string UploadPhotoAsync(IFormFile Image)
+        public  async Task<IDataResult<string>> UploadPhotoAsync(IFormFile Image)
         {
-            return _pictureSettings.Add(Image);
+            return await _pictureSettings.Add(Image);
             
             //    Console.WriteLine(uploadResult.JsonObj);
 

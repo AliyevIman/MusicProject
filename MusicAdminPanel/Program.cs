@@ -36,6 +36,8 @@ builder.Services.AddScoped<ITicketManager, TicketManager>();
 builder.Services.AddScoped<IMusiciansShowsDal, EfMusicianShowDal>();
 builder.Services.AddScoped<IMusicianShowManager, MusicianShowsManager>();
 
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderManager, SliderManager>();
 //builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
 //builder.Services.AddScoped<IMusicianManager, MusicianManager>();
 
@@ -61,15 +63,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 
 
-//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-//    .AddCookie(options =>
-//    {
-//        options.AccessDeniedPath = "/dashboard/auth/login";
-//        options.LoginPath = "/dashboard/auth/login";
-//        options.SlidingExpiration = true;
-//        options.ExpireTimeSpan = TimeSpan.FromDays(2);
-//    });
-
 
 var app = builder.Build();
 
@@ -81,6 +74,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+app.UseStatusCodePagesWithReExecute("/error/{0}");
+
+app.UseCookiePolicy();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

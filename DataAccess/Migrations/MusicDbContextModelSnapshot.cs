@@ -36,10 +36,10 @@ namespace DataAccess.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsFeatured")
+                    b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
 
-                    b.Property<bool?>("IsNew")
+                    b.Property<bool>("IsNew")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
@@ -50,10 +50,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RecordLable")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SongCount")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -104,10 +100,6 @@ namespace DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Stock")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TicketCount")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -250,6 +242,37 @@ namespace DataAccess.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("RefreshTokens");
+                });
+
+            modelBuilder.Entity("Entites.Concrete.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Header")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Picture1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubHeader")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Slider");
                 });
 
             modelBuilder.Entity("Entites.Concrete.Ticket", b =>

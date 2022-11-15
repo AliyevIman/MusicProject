@@ -1,0 +1,92 @@
+﻿@using Entites.Concrete
+
+@model Slider
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Live Show</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Header" class="control-label"></label>
+                <input asp-for="Header" class="form-control" />
+                <span asp-validation-for="Header" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SubHeader" class="control-label"></label>
+                <input asp-for="SubHeader" class="form-control" />
+                <span asp-validation-for="SubHeader" class="text-danger"></span>
+            </div>
+
+     
+         
+            <div class="form-group">
+
+                <label>Sekil 1</label>
+                <input asp-for=Picture1 id="imgurl" type="hidden" class="form-control">
+                <input id="PictureUrls" type="file" accept="image/*" class="form-control">
+                <img />
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Sekil 2</label>
+                <input asp-for=Picture2 id="imgurl" type="hidden" class="form-control">
+                <input id="PictureUrls" type="file" accept="image/*" class="form-control">
+                <img />
+
+            </div>
+            <div class="form-group">
+
+                <label>Sekil 3</label>
+                <input asp-for=Picture3 id="imgurl" type="hidden" class="form-control">
+                <input id="PictureUrls" type="file" accept="image/*" class="form-control">
+                <img />
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+@section MyScripts{
+    <script>
+        var pictureUrl = document.querySelectorAll("#PictureUrls")
+
+        $(pictureUrl).change(function () {
+            var pictures = this.files;
+            var PicsData = new FormData();
+            PicsData.append("Picture", pictures[0])
+            var img = $(this).parent().find('img')
+            var inp = $(this).parent().find('#imgurl')
+            $.ajax({
+                url: "/core/UploadPictures",
+                type: "POST",
+                data: PicsData,
+                dataType: "JSON",
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    img.attr('src', res.value[0])
+                    inp.val(res.value[0])
+                }
+            })
+        })
+    </script>
+}

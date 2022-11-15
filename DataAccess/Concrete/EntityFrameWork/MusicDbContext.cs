@@ -28,6 +28,8 @@ namespace DataAccess.Concrete.EntityFrameWork
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Role> Role { get; set; }
+        public DbSet<Slider> Slider{ get; set; }
+
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)

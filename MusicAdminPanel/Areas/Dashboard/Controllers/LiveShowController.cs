@@ -66,14 +66,11 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
         {
             try
             {
-                if (Photo != null)
-                {
-                    _pictureSettings.Add(Photo);
-
-                }
+           
 
                 _manager.Create(liveShow);
                 return RedirectToAction(nameof(Index));
+
             }
             catch (Exception)
             {

@@ -2,6 +2,7 @@
 using Business.Settings;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
+using Core.Utilities.Results;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -28,7 +29,7 @@ namespace Business.Concrete
             Account account = new Account(_pictureSetting.Name, _pictureSetting.ApiKey, _pictureSetting.ApiSecret);
             _cloudinary = new Cloudinary(account);
         }
-        public string Add(IFormFile? img)
+        public async Task<IDataResult<string>> Add(IFormFile? img)
         {
             var stream = img.OpenReadStream();
 
@@ -39,9 +40,9 @@ namespace Business.Concrete
             var result = _cloudinary.Upload(uploadParams);
             if (result.Uri.ToString() != null)
             {
-                return result.Uri.ToString();
+                return new SuccessDataResult<string>(result.Uri.ToString());
             }
-            return "";
+            return new ErrorDataResult<string>("");
         }
    
 

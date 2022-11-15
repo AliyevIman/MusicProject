@@ -1,0 +1,73 @@
+﻿@using Entites.Concrete
+
+@model IEnumerable<Slider>
+<h1>Slider</h1>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Header)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture2)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture3)
+
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            @if (item.IsDeleted == false)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Header)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubHeader)
+
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(model=> item.Picture1)" width="100" />
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(model=> item.Picture2)" width="100" />
+                    </td>
+                    <td>
+                        <img src="@Html.DisplayFor(model=> item.Picture3)" width="100" />
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+
+
+</table>

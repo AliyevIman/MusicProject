@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Core.Utilities.Results;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Business.Abstract
 {
     public interface IPictureSettings
     {
-        string Add(IFormFile img);
+        Task<IDataResult<string>> Add(IFormFile img);
     }
 }

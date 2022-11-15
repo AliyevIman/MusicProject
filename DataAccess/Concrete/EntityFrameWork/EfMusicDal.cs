@@ -41,7 +41,7 @@ namespace DataAccess.Concrete.EntityFrameWork
         public List<Music> GetMusics()
         {
             using MusicDbContext context = new();
-            return context.Musics.Where(c => !c.IsDeleted).ToList();
+            return context.Musics.Include(c=>c.Album).Where(c => !c.IsDeleted).ToList();
         }
 
         public List<Music> GetMusicsAll()

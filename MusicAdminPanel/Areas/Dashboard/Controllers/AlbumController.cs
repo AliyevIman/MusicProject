@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace MusicAdminPanel.Areas.Dashboard.Controllers
 {
     [Area("dashboard")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+
 
     public class AlbumController : Controller
     {

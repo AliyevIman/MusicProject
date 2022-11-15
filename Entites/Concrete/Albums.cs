@@ -17,7 +17,6 @@ namespace Entites.Concrete
         public bool IsDeleted { get; set; }
 
         public string? RecordLable { get; set; } 
-        public string SongCount { get; set; }
         public bool IsNew { get; set; }
         public bool IsFeatured { get; set; }
         public List<Music>? Music { get; set; }
