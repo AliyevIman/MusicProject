@@ -2601,11 +2601,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\Entites.csproj",
+      "projectUniqueName": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Entites\\Entites.csproj",
       "projectName": "Entites",
-      "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\Entites.csproj",
+      "projectPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Entites\\Entites.csproj",
       "packagesPath": "C:\\Users\\imane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\obj\\",
+      "outputPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Entites\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\imane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2622,8 +2622,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\imane\\Desktop\\MusicProject\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Core\\Core.csproj"
+            "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Core\\Core.csproj"
             }
           }
         }

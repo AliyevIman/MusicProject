@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wghjJdQ3DaIFa5bGx32ZBOaRuFlt1MtjZzg8aFUPmo0=",
+  "Hash": "MwKM113wlI7DSyPMIKwKmGbSn4RALLtIGK1ImmwASQI=",
   "Source": "MusicProject",
   "BasePath": "_content/MusicProject",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "MusicProject\\wwwroot",
       "Source": "MusicProject",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "C:\\Users\\imane\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.10\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\031806e6-fd1b-4989-80ed-b21ce8aa95136862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\031806e6-fd1b-4989-80ed-b21ce8aa95136862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/031806e6-fd1b-4989-80ed-b21ce8aa95136862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\files\\031806e6-fd1b-4989-80ed-b21ce8aa95136862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\0cd617b4-6b18-499d-9633-dae8c55abad96862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\0cd617b4-6b18-499d-9633-dae8c55abad96862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/0cd617b4-6b18-499d-9633-dae8c55abad96862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\files\\0cd617b4-6b18-499d-9633-dae8c55abad96862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\3d12b938-c10f-4e8b-ae48-cb9f54d78f936862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\3d12b938-c10f-4e8b-ae48-cb9f54d78f936862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/3d12b938-c10f-4e8b-ae48-cb9f54d78f936862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\files\\3d12b938-c10f-4e8b-ae48-cb9f54d78f936862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\3d503353-55bb-4c24-a41c-52d9eb8f08156862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\3d503353-55bb-4c24-a41c-52d9eb8f08156862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/3d503353-55bb-4c24-a41c-52d9eb8f08156862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\files\\3d503353-55bb-4c24-a41c-52d9eb8f08156862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\6951824f-4be2-46f5-a9c9-9aeb9c4df22b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\6951824f-4be2-46f5-a9c9-9aeb9c4df22b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/6951824f-4be2-46f5-a9c9-9aeb9c4df22b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\files\\6951824f-4be2-46f5-a9c9-9aeb9c4df22b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\708b84d1-9359-4bfd-9813-a2a8724ad6b26862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\708b84d1-9359-4bfd-9813-a2a8724ad6b26862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/708b84d1-9359-4bfd-9813-a2a8724ad6b26862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\files\\708b84d1-9359-4bfd-9813-a2a8724ad6b26862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\7586e72a-d062-433d-be07-ecf07bb3a12e6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\7586e72a-d062-433d-be07-ecf07bb3a12e6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/7586e72a-d062-433d-be07-ecf07bb3a12e6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\files\\7586e72a-d062-433d-be07-ecf07bb3a12e6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\759b1933-495e-46de-9906-90dbad842a68heijanbiasik.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\759b1933-495e-46de-9906-90dbad842a68heijanbiasik.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/759b1933-495e-46de-9906-90dbad842a68heijanbiasik.jfif",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\files\\759b1933-495e-46de-9906-90dbad842a68heijanbiasik.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\a0a45c68-daf3-4a9f-9be9-57e5b01e2e4anegedeerr.jpg",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\a0a45c68-daf3-4a9f-9be9-57e5b01e2e4anegedeerr.jpg",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/a0a45c68-daf3-4a9f-9be9-57e5b01e2e4anegedeerr.jpg",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\files\\a0a45c68-daf3-4a9f-9be9-57e5b01e2e4anegedeerr.jpg"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\a64e022b-dbe5-4f19-b54e-3e9a03cc3d1b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\a64e022b-dbe5-4f19-b54e-3e9a03cc3d1b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/a64e022b-dbe5-4f19-b54e-3e9a03cc3d1b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\files\\a64e022b-dbe5-4f19-b54e-3e9a03cc3d1b6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\ace32aff-bf48-4332-814d-56f5740950536862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\ace32aff-bf48-4332-814d-56f5740950536862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/ace32aff-bf48-4332-814d-56f5740950536862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\files\\ace32aff-bf48-4332-814d-56f5740950536862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\c37fd319-2cd2-4d5c-953e-3b19e8af04dcXpertAkula.jpg",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\c37fd319-2cd2-4d5c-953e-3b19e8af04dcXpertAkula.jpg",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/c37fd319-2cd2-4d5c-953e-3b19e8af04dcXpertAkula.jpg",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\files\\c37fd319-2cd2-4d5c-953e-3b19e8af04dcXpertAkula.jpg"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\d0e5f335-0eed-46dc-9b44-d32a5cdf9d326862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\d0e5f335-0eed-46dc-9b44-d32a5cdf9d326862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/d0e5f335-0eed-46dc-9b44-d32a5cdf9d326862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\files\\d0e5f335-0eed-46dc-9b44-d32a5cdf9d326862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\ecc9f3be-ddf9-4aa1-9ef7-2dc69e8e70416862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\ecc9f3be-ddf9-4aa1-9ef7-2dc69e8e70416862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/ecc9f3be-ddf9-4aa1-9ef7-2dc69e8e70416862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\files\\ecc9f3be-ddf9-4aa1-9ef7-2dc69e8e70416862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\f5b749e5-307b-4569-963c-ce4d9c39abdc6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\f5b749e5-307b-4569-963c-ce4d9c39abdc6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/f5b749e5-307b-4569-963c-ce4d9c39abdc6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\files\\f5b749e5-307b-4569-963c-ce4d9c39abdc6862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif"
     },
     {
-      "Identity": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\files\\fdf893ef-8ab5-4718-bfc1-49283b22ac436862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
+      "Identity": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\files\\fdf893ef-8ab5-4718-bfc1-49283b22ac436862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "SourceId": "MusicProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicProject\\wwwroot\\",
       "BasePath": "_content/MusicProject",
       "RelativePath": "files/fdf893ef-8ab5-4718-bfc1-49283b22ac436862aa1a-a591-4c2b-8305-067f9ced2d1a.jfif",
       "AssetKind": "All",

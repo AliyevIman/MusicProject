@@ -2685,11 +2685,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane\\Desktop\\MusicProject\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Core\\Core.csproj",
+      "projectPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\imane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Core\\obj\\",
+      "outputPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\imane\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10459,11 +10459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane\\Desktop\\MusicProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Business\\Business.csproj",
+      "projectPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\imane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Business\\obj\\",
+      "outputPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\imane\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10480,11 +10480,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\imane\\Desktop\\MusicProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\Entites.csproj": {
-              "projectPath": "C:\\Users\\imane\\Desktop\\MusicProject\\Entites\\Entites.csproj"
+            "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Entites\\Entites.csproj": {
+              "projectPath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Entites\\Entites.csproj"
             }
           }
         }

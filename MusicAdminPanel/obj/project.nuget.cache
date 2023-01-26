@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G6VvcdB30PcHRmmjZaCtxhdDBdZk06iLiGbSsZ2eWa8GoPctpqHsakHGW3Js5WtuNHpNU7U0+8VS8rGhzyr1gQ==",
+  "dgSpecHash": "0leo2sOqONfyVp+g+BciY0lIZdJxIPt0pU0CS1cjt1a2npEcJJ4up2gRIXb3fmUrK1oFt/RdTcw8ks3TLiDnXQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane\\Desktop\\MusicProject\\MusicAdminPanel\\MusicAdminPanel.csproj",
+  "projectFilePath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\MusicAdminPanel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imane\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\imane\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

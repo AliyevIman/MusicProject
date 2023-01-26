@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "au3CxELCeQ69/xohxJ1BLW7UJ6G63bKZt0zbtIUkiTXuFSgxrXCBIwjkQTvegniLjSLVBpJn/P+sRWyNHvNo/w==",
+  "dgSpecHash": "vUcT2t9Sr7rU1CZFTWAbZDUiSsHTSzd3y1oOV+NS0bJovf4C4NNvs7g6Q4isGZYFHRcIFDqIle7jvfj2ndnXcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane\\Desktop\\MusicProject\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imane\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\imane\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

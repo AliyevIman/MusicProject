@@ -41,14 +41,14 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
         {
 
             var user = await _userManager.FindByEmailAsync(loginVM.Email);
-            if (user == null) return View();
+            if (user == null) return NotFound();
             var roles = await _userManager.GetRolesAsync(user);
 
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
 
             if (!result.Succeeded&&roles==null)
             {
-                return View();
+                return NotFound();
             }
 
             return RedirectToAction("Index", "Home");

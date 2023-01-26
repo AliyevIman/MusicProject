@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wipViyy5AEceW7309ITWDVQwZcePcL+0u/Tjujo31RNbNJnWV88FlnjrQyQhHKUjfTnU8LcbqcMGn2vvGJNGNw==",
+  "dgSpecHash": "vPb8hsb+JsqhZtUhSqdK4dqHlvmWatL7+Izde6IvBCp6Xa8M/L8LfOaU3BchlkFXsoyaC+aScXSNB6XeQR/OCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\imane\\Desktop\\MusicProject\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\Core\\Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\imane\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\imane\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
