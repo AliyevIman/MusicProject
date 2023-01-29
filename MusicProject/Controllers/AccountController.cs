@@ -47,6 +47,16 @@ namespace MusicProject.Controllers
             _logger = logger;
         }
 
+        //[HttpPost]
+        //[AllowAnonymous]
+        //[Route("account/external-login")]
+        //public IActionResult ExternalLogin(string provider, string returnUrl)
+        //{
+        //    var redirectUrl = $"https://api.domain.com/identity/v1/account/external-auth-callback?returnUrl={returnUrl}";
+        //    var properties = signInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+        //    properties.AllowRefresh = true;
+        //    return Challenge(properties, provider);
+        //}
 
         // POST api/<AccountController>
         [HttpPost("register")]
@@ -54,8 +64,13 @@ namespace MusicProject.Controllers
         {
             var user = _mapper.Map<User>(userDTO);
             user.UserName = userDTO.Email;
+            var resultuser = await _userManager.FindByEmailAsync(userDTO.Email);
+            if (resultuser != null)
+            {
+                return BadRequest($"l'Email {userDTO.Email} already use ");
+            }
             var result = await _userManager.CreateAsync(user, userDTO.Password);
-
+            
 
             await _userManager.AddToRoleAsync(user, "User");
 
@@ -71,6 +86,7 @@ namespace MusicProject.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> LoginUser([FromBody] LoginUserDTO userDTO)
         {
+
             var findUser = await _userManager.FindByEmailAsync(userDTO.Email);
             var checkPassword = await _userManager.CheckPasswordAsync(findUser, userDTO.Password);
             if (findUser != null && checkPassword)

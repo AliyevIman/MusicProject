@@ -16,7 +16,7 @@ namespace DataAccess.Concrete.EntityFrameWork
         protected override void OnConfiguring(DbContextOptionsBuilder option)
         {
             base.OnConfiguring(option);
-            option.UseSqlServer(@"Server=DESKTOP-0LV8GT4\SQLEXPRESS;Database=FinalMusicDB;Trusted_Connection=true;MultipleActiveResultSets=True");
+            option.UseSqlServer(@"Server=DESKTOP-0LV8GT4\SQLEXPRESS;Database=FinalMusicDB;Trusted_Connection=true;TrustServerCertificate=Yes;MultipleActiveResultSets=True");
         }
         public DbSet<Music> Musics { get; set; }
         //public DbSet<Musician> Musicians{ get; set; }
