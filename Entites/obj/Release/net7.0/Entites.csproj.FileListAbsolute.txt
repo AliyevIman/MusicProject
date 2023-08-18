@@ -1,0 +1,15 @@
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\bin\Release\net7.0\Entites.deps.json
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\bin\Release\net7.0\Entites.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\bin\Release\net7.0\Entites.pdb
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\bin\Release\net7.0\Core.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\bin\Release\net7.0\Core.pdb
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.csproj.AssemblyReference.cache
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.AssemblyInfoInputs.cache
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.AssemblyInfo.cs
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.csproj.CoreCompileInputs.cache
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.csproj.CopyComplete
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\refint\Entites.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\Entites.pdb
+C:\Users\imane\Desktop\final Project muisc\MusicProject\Entites\obj\Release\net7.0\ref\Entites.dll

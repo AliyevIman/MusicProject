@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Numerics;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 
 namespace MusicAdminPanel.Areas.Dashboard.Controllers
 {
@@ -17,13 +19,15 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
         private readonly IMusicManager _manager;
         private readonly IAlbumManager _album;
         private readonly IWebHostEnvironment _env;
+        private readonly IPictureSettings _pictureSettings;
 
 
-        public MusicController(IMusicManager manager, IWebHostEnvironment env, IAlbumManager album)
+        public MusicController(IMusicManager manager, IWebHostEnvironment env, IAlbumManager album, IPictureSettings pictureSettings)
         {
             _manager = manager;
             _env = env;
             _album = album;
+            _pictureSettings = pictureSettings;
         }
 
 
@@ -65,27 +69,18 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
         {
             try
             {
+                _manager.AddMusic(music);
+
                 if (Photo != null)
                 {
-                    string filename = Guid.NewGuid() + Photo.FileName;
-                    string rootPath = Path.Combine(_env.WebRootPath, "images");
-                    string photoPath = Path.Combine(rootPath, filename);
-                    using FileStream fl = new(photoPath, FileMode.Create);
-                    Photo.CopyTo(fl);
-                    music.Photo = "/images/" + filename;
+                 _pictureSettings.Add(Photo);
                 }
                 if (MusicUrl != null)
                 {
-                    string filename = Guid.NewGuid() + MusicUrl.FileName;
-                    string rootPath = Path.Combine(_env.WebRootPath, "music");
-                    string photoPath = Path.Combine(rootPath, filename);
-                    using FileStream fl = new(photoPath, FileMode.Create);
-                    MusicUrl.CopyTo(fl);
-                    music.MusicUrl = "/music/" + filename;
+                 _pictureSettings.AddMusic(MusicUrl);
                 }
                 //_context.Add(music);
                 //await _context.SaveChangesAsync();
-                _manager.AddMusic(music);
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception)
@@ -94,7 +89,7 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
                 return View(music);
 
             }
-            return View(music);
+           
 
         }
 
@@ -125,9 +120,11 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
             }
             if (ModelState.IsValid)
             {
+
                 try
                 {
                     _manager.Udpdate(id, music);
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {

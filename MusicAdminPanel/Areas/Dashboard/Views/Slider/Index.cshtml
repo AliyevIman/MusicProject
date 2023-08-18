@@ -22,16 +22,9 @@
                 @Html.DisplayNameFor(model => model.SubHeader)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Picture1)
+                @Html.DisplayNameFor(model => model.Picture)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Picture2)
-
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Picture3)
-
-            </th>
+          
 
         </tr>
     </thead>
@@ -50,13 +43,7 @@
 
                     </td>
                     <td>
-                        <img src="@Html.DisplayFor(model=> item.Picture1)" width="100" />
-                    </td>
-                    <td>
-                        <img src="@Html.DisplayFor(model=> item.Picture2)" width="100" />
-                    </td>
-                    <td>
-                        <img src="@Html.DisplayFor(model=> item.Picture3)" width="100" />
+                        <img src="@Html.DisplayFor(model=> item.Picture)" width="100" />
                     </td>
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

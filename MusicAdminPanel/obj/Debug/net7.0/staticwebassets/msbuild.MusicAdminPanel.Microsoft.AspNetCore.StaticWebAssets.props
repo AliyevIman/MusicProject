@@ -16816,6 +16816,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\02f1ea20-ba41-4844-9de2-751bdd1c8e3fimage_2023-06-09_132216543.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>images/02f1ea20-ba41-4844-9de2-751bdd1c8e3fimage_2023-06-09_132216543.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\02f1ea20-ba41-4844-9de2-751bdd1c8e3fimage_2023-06-09_132216543.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\14639e40-3eb1-4011-999c-841edf92834fheijanbiasik.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>MusicAdminPanel</SourceId>
@@ -17024,6 +17040,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\7a4b590d-f117-4abe-8868-27b68ab853aanegedeerr.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\7d050ad1-961f-49c5-baa5-dcd10a3b66c7slid-exp1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>images/7d050ad1-961f-49c5-baa5-dcd10a3b66c7slid-exp1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\7d050ad1-961f-49c5-baa5-dcd10a3b66c7slid-exp1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\8075fc3f-b276-4651-b60d-4cb84adde4f4XpertAkula.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>MusicAdminPanel</SourceId>
@@ -17103,6 +17135,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\8a47b8ec-7fb7-4223-80f6-5221db99aa42XpertAkula.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\97c47b46-472a-4ef4-8c4d-44b95b79aa7fslid-exp1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>images/97c47b46-472a-4ef4-8c4d-44b95b79aa7fslid-exp1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\97c47b46-472a-4ef4-8c4d-44b95b79aa7fslid-exp1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\9c1bde27-27e1-4acb-ae0d-ceadb0e46b29heijanbiasik.jfif))">
       <SourceType>Package</SourceType>
@@ -17232,6 +17280,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\c528ac11-530d-4b1b-b122-99f43edf75d2Paster.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\d9b68cb2-3449-4735-9f69-ddd76a6635edslid-exp1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>images/d9b68cb2-3449-4735-9f69-ddd76a6635edslid-exp1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\d9b68cb2-3449-4735-9f69-ddd76a6635edslid-exp1.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\e4636805-f871-43b5-aad1-c43e1bcf923eheijanbiasik.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>MusicAdminPanel</SourceId>
@@ -17263,6 +17327,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\e8c650fc-df50-49f7-9b19-d2744e812d72heijanbiasik.jfif))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\eecb51ba-9544-4100-8304-d2cb8c62f9dcslid-exp1.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>images/eecb51ba-9544-4100-8304-d2cb8c62f9dcslid-exp1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\eecb51ba-9544-4100-8304-d2cb8c62f9dcslid-exp1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\fda9870f-7407-43ae-9ed5-cd4b45026b69XpertAkula.jpg))">
       <SourceType>Package</SourceType>
@@ -18256,6 +18336,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\4c5eeda3-936e-4256-b564-15555ed6a8f5Death_Grips_-_Get_Got_xmbupo.mp3))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\84349f30-946f-493b-b8c7-ee9739183c0dSamie_Bower_-_How_Far.mp3))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>music/84349f30-946f-493b-b8c7-ee9739183c0dSamie_Bower_-_How_Far.mp3</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\84349f30-946f-493b-b8c7-ee9739183c0dSamie_Bower_-_How_Far.mp3))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\96c83299-88ff-4c18-ac65-fc0d2ac51abcSamie_Bower_-_How_Far.mp3))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>music/96c83299-88ff-4c18-ac65-fc0d2ac51abcSamie_Bower_-_How_Far.mp3</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\96c83299-88ff-4c18-ac65-fc0d2ac51abcSamie_Bower_-_How_Far.mp3))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\9f42de82-3be1-44db-b1a1-5695e878d822Ate - Diğer Yarım mp3 indir.mp3))">
       <SourceType>Package</SourceType>
       <SourceId>MusicAdminPanel</SourceId>
@@ -18287,6 +18399,38 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\afc41386-184c-4ae6-abae-3d0e36fbe59dDeath_Grips_-_Get_Got_xmbupo.mp3))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\bab472af-ee7a-47f4-ae02-9c69a211042bSamie_Bower_-_How_Far.mp3))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>music/bab472af-ee7a-47f4-ae02-9c69a211042bSamie_Bower_-_How_Far.mp3</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\bab472af-ee7a-47f4-ae02-9c69a211042bSamie_Bower_-_How_Far.mp3))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\c6f0aec6-31ca-4357-aaa3-5f8e0b176e76Samie_Bower_-_How_Far.mp3))">
+      <SourceType>Package</SourceType>
+      <SourceId>MusicAdminPanel</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MusicAdminPanel</BasePath>
+      <RelativePath>music/c6f0aec6-31ca-4357-aaa3-5f8e0b176e76Samie_Bower_-_How_Far.mp3</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\c6f0aec6-31ca-4357-aaa3-5f8e0b176e76Samie_Bower_-_How_Far.mp3))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\music\fc055398-d69f-47a1-8b34-b67a84351ae0Ate - Diğer Yarım mp3 indir.mp3))">
       <SourceType>Package</SourceType>

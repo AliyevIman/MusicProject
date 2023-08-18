@@ -14,6 +14,11 @@ namespace DataAccess.Concrete.EntityFrameWork
 {
     public class EfSliderDal : EfEntityRepositoryBase<MusicDbContext, Slider>, ISliderDal
     {
-    
+        public Slider GetSlider()
+        {
+            using MusicDbContext _context = new();
+            return _context.Slider.FirstOrDefault();
+
+        }
     }
 }

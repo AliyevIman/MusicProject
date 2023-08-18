@@ -7,6 +7,7 @@ using Entites.Concrete;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using System.Diagnostics;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +40,8 @@ builder.Services.AddScoped<IMusicianShowManager, MusicianShowsManager>();
 builder.Services.AddScoped<IPictureSettings, PictureManager>();
 builder.Services.AddScoped<IMusicSettings, MusicAddManager>();
 
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderManager, SliderManager>();
 
 
 //builder.Services.AddScoped<IMusicianDal, EfMusicianDal>();
@@ -71,8 +74,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(opt =>
 {
-    opt.RequireHttpsMetadata = false;
-    opt.SaveToken = true;
+opt.RequireHttpsMetadata = false;
+opt.SaveToken = true;
     opt.TokenValidationParameters = new TokenValidationParameters()
     {
         ValidateIssuer = true,
@@ -83,6 +86,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
+//.AddGoogle(options =>
+//{
+  //  options.ClientId = "602897885473-akk58tuncmk2t29c9r961s730rbeoerf.apps.googleusercontent.com";
+    //options.ClientSecret = "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";
+//});
 
 
 builder.Services.AddAuthorization(optins =>

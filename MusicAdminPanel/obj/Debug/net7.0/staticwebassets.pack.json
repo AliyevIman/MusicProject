@@ -4209,6 +4209,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\02f1ea20-ba41-4844-9de2-751bdd1c8e3fimage_2023-06-09_132216543.png",
+      "PackagePath": "staticwebassets\\images\\02f1ea20-ba41-4844-9de2-751bdd1c8e3fimage_2023-06-09_132216543.png"
+    },
+    {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\14639e40-3eb1-4011-999c-841edf92834fheijanbiasik.jfif",
       "PackagePath": "staticwebassets\\images\\14639e40-3eb1-4011-999c-841edf92834fheijanbiasik.jfif"
     },
@@ -4261,6 +4265,10 @@
       "PackagePath": "staticwebassets\\images\\7a4b590d-f117-4abe-8868-27b68ab853aanegedeerr.jpg"
     },
     {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\7d050ad1-961f-49c5-baa5-dcd10a3b66c7slid-exp1.jpg",
+      "PackagePath": "staticwebassets\\images\\7d050ad1-961f-49c5-baa5-dcd10a3b66c7slid-exp1.jpg"
+    },
+    {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\8075fc3f-b276-4651-b60d-4cb84adde4f4XpertAkula.jpg",
       "PackagePath": "staticwebassets\\images\\8075fc3f-b276-4651-b60d-4cb84adde4f4XpertAkula.jpg"
     },
@@ -4279,6 +4287,10 @@
     {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\8a47b8ec-7fb7-4223-80f6-5221db99aa42XpertAkula.jpg",
       "PackagePath": "staticwebassets\\images\\8a47b8ec-7fb7-4223-80f6-5221db99aa42XpertAkula.jpg"
+    },
+    {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\97c47b46-472a-4ef4-8c4d-44b95b79aa7fslid-exp1.jpg",
+      "PackagePath": "staticwebassets\\images\\97c47b46-472a-4ef4-8c4d-44b95b79aa7fslid-exp1.jpg"
     },
     {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\9c1bde27-27e1-4acb-ae0d-ceadb0e46b29heijanbiasik.jfif",
@@ -4313,12 +4325,20 @@
       "PackagePath": "staticwebassets\\images\\c528ac11-530d-4b1b-b122-99f43edf75d2Paster.jpg"
     },
     {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\d9b68cb2-3449-4735-9f69-ddd76a6635edslid-exp1.jpg",
+      "PackagePath": "staticwebassets\\images\\d9b68cb2-3449-4735-9f69-ddd76a6635edslid-exp1.jpg"
+    },
+    {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\e4636805-f871-43b5-aad1-c43e1bcf923eheijanbiasik.jfif",
       "PackagePath": "staticwebassets\\images\\e4636805-f871-43b5-aad1-c43e1bcf923eheijanbiasik.jfif"
     },
     {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\e8c650fc-df50-49f7-9b19-d2744e812d72heijanbiasik.jfif",
       "PackagePath": "staticwebassets\\images\\e8c650fc-df50-49f7-9b19-d2744e812d72heijanbiasik.jfif"
+    },
+    {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\eecb51ba-9544-4100-8304-d2cb8c62f9dcslid-exp1.jpg",
+      "PackagePath": "staticwebassets\\images\\eecb51ba-9544-4100-8304-d2cb8c62f9dcslid-exp1.jpg"
     },
     {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\images\\fda9870f-7407-43ae-9ed5-cd4b45026b69XpertAkula.jpg",
@@ -4569,12 +4589,28 @@
       "PackagePath": "staticwebassets\\music\\4c5eeda3-936e-4256-b564-15555ed6a8f5Death_Grips_-_Get_Got_xmbupo.mp3"
     },
     {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\84349f30-946f-493b-b8c7-ee9739183c0dSamie_Bower_-_How_Far.mp3",
+      "PackagePath": "staticwebassets\\music\\84349f30-946f-493b-b8c7-ee9739183c0dSamie_Bower_-_How_Far.mp3"
+    },
+    {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\96c83299-88ff-4c18-ac65-fc0d2ac51abcSamie_Bower_-_How_Far.mp3",
+      "PackagePath": "staticwebassets\\music\\96c83299-88ff-4c18-ac65-fc0d2ac51abcSamie_Bower_-_How_Far.mp3"
+    },
+    {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\9f42de82-3be1-44db-b1a1-5695e878d822Ate - Diğer Yarım mp3 indir.mp3",
       "PackagePath": "staticwebassets\\music\\9f42de82-3be1-44db-b1a1-5695e878d822Ate - Diğer Yarım mp3 indir.mp3"
     },
     {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\afc41386-184c-4ae6-abae-3d0e36fbe59dDeath_Grips_-_Get_Got_xmbupo.mp3",
       "PackagePath": "staticwebassets\\music\\afc41386-184c-4ae6-abae-3d0e36fbe59dDeath_Grips_-_Get_Got_xmbupo.mp3"
+    },
+    {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\bab472af-ee7a-47f4-ae02-9c69a211042bSamie_Bower_-_How_Far.mp3",
+      "PackagePath": "staticwebassets\\music\\bab472af-ee7a-47f4-ae02-9c69a211042bSamie_Bower_-_How_Far.mp3"
+    },
+    {
+      "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\c6f0aec6-31ca-4357-aaa3-5f8e0b176e76Samie_Bower_-_How_Far.mp3",
+      "PackagePath": "staticwebassets\\music\\c6f0aec6-31ca-4357-aaa3-5f8e0b176e76Samie_Bower_-_How_Far.mp3"
     },
     {
       "Id": "C:\\Users\\imane\\Desktop\\final Project muisc\\MusicProject\\MusicAdminPanel\\wwwroot\\music\\fc055398-d69f-47a1-8b34-b67a84351ae0Ate - Diğer Yarım mp3 indir.mp3",

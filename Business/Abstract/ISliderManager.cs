@@ -14,9 +14,8 @@ namespace Business.Abstract
         List<Slider> GetAll();
         void Creat(Slider slider);
         void DeleteSlider(int id);
-        Slider  GetById(int id);
+        Task<Slider > Get();
+        Slider GetById(int? id);
         void Update(Slider slider);
-
-
     }
 }

@@ -11,5 +11,6 @@ namespace Business.Abstract
     public interface IPictureSettings
     {
         Task<IDataResult<string>> Add(IFormFile img);
+       Task<IDataResult<string>> AddMusic(IFormFile audio);
     }
 }

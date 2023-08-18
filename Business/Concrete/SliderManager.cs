@@ -43,15 +43,20 @@ namespace Business.Concrete
            return _sliderDal.GetAll();
         }
 
-        public  Slider GetById(int id)
+        public async  Task<Slider> Get()
         {
-            return _sliderDal.Get(c => c.Id == id && !c.IsDeleted);
-
+            return  _sliderDal.Get(c =>!c.IsDeleted);
         }
 
         public void Update(Slider slider)
         {
             _sliderDal.Update(slider);
+        }
+
+        public Slider GetById(int? id)
+        {
+            return _sliderDal.Get(c => c.Id==id &&!c.IsDeleted);
+
         }
     }
 }

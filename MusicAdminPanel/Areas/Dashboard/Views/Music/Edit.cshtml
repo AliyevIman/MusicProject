@@ -22,17 +22,17 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="MusicUrl" class="control-label"></label>
-                <input type="file" asp-for="MusicUrl" class="form-control" />
-                <span asp-validation-for="MusicUrl" class="text-danger"></span>
+                    <label asp-for="MusicUrl" class="control-label"></label>
+                <input asp-for=MusicUrl id="audiourl" type="hidden" class="form-control">
+                    <input id="AudioUrls" type="file" accept="audio/*" class="form-control">
                   <audio controls>
-                <source src="@Html.DisplayFor(model => model.MusicUrl)" type="audio/ogg">
-                <source src="@Html.DisplayFor(model => model.MusicUrl)" type="audio/mpeg">
+                      <source src="@Html.DisplayFor(model => model.MusicUrl)" type="audio/ogg">
+                      <source src="@Html.DisplayFor(model => model.MusicUrl)" type="audio/mpeg">
                     </audio> 
             </div>
             <div class="form-group">
                 <label asp-for="MusicVideo" class="control-label"></label>
-                <input asp-for="MusicVideo" class="form-control" />
+                <input asp-for="MusicVideo"  class="form-control" />
                 <span asp-validation-for="MusicVideo" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -47,9 +47,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Photo" class="control-label"></label>
-                <input type="file" asp-for="Photo" class="form-control" />
-                <span asp-validation-for="Photo" class="text-danger"></span>
-                <img src="@Html.DisplayFor(model => model.Photo)" width="100" />
+                <input asp-for=Photo id="imgurl" type="hidden" class="form-control">
+                <input id="PictureUrls" type="file" accept="image/*" class="form-control">
+                <img src=@Model.Photo />
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -62,3 +62,54 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+@section MyScripts{
+    <script>
+        var pictureUrl = document.querySelectorAll("#PictureUrls")
+        $(pictureUrl).change(function () {
+            var pictures = this.files;
+            var PicsData = new FormData();
+            PicsData.append("Picture", pictures[0])
+            var img = $(this).parent().find('img')
+            var inp = $(this).parent().find('#imgurl')
+            $.ajax({
+                url: "/core/UploadPictures",
+                type: "POST",
+                data: PicsData,
+                dataType: "JSON",
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    img.attr('src', res.value[0])
+                    alert(inp.val())
+                    inp.val(res.value[0])
+                }
+            })
+        })
+        var AudioUrl = document.querySelectorAll("#AudioUrls")
+
+        $(AudioUrl).change(function () {
+            var pictures = this.files;
+            var PicsData = new FormData();
+            PicsData.append("MusicUrl", pictures[0])
+            var img = $(this).parent().find('audio')
+            var inp = $(this).parent().find('#audiourl')
+            $.ajax({
+                url: "/core/UploadMusic",
+                type: "POST",
+                data: PicsData,
+                dataType: "JSON",
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    img.attr('src', res.value[0])
+                    inp.val(res.value[0])
+                }
+            })
+        })
+       
+
+
+      
+    </script>
+}
+@*dvkmhcbdu*@

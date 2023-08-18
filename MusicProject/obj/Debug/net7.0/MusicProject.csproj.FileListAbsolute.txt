@@ -308,3 +308,10 @@ C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\n
 C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Google.Apis.Core.dll
 C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Serilog.dll
 C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\firebase-config.json
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\FirebaseAdmin.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Firebase.Auth.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Google.Api.Gax.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Google.Api.Gax.Rest.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\imane\Desktop\final Project muisc\MusicProject\MusicProject\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

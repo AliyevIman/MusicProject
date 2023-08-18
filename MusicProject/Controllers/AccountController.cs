@@ -1,28 +1,16 @@
 ﻿using AutoMapper;
-using Business.Abstract;
 using Business.Concrete;
 using Entites.Concrete;
 using Entites.DTO;
-using IdentityServer4.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.Extensions.Configuration;
-//using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.Net.Http.Headers;
-using Newtonsoft.Json.Linq;
-using NuGet.Common;
-using System.IdentityModel.Tokens.Jwt;
+using Google.Apis.Auth.OAuth2;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+/*using Firebase.Auth;*/
 //using System.IdentityModel.Tokens.Jwt;
 //using System.IdentityModel.Tokens.Jwt;
-//using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace MusicProject.Controllers
 {
@@ -65,12 +53,17 @@ namespace MusicProject.Controllers
             var user = _mapper.Map<User>(userDTO);
             user.UserName = userDTO.Email;
             var resultuser = await _userManager.FindByEmailAsync(userDTO.Email);
+
             if (resultuser != null)
             {
                 return BadRequest($"l'Email {userDTO.Email} already use ");
             }
             var result = await _userManager.CreateAsync(user, userDTO.Password);
-            
+/*
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var confirmationLink = Url.Action("ConfirmEmail", "Email", new { token, email = user.Email }, Request.Scheme);
+            EmailHelper emailHelper = new EmailHelper();
+            bool emailResponse = emailHelper.SendEmail(user.Email, confirmationLink);*/
 
             await _userManager.AddToRoleAsync(user, "User");
 
@@ -198,6 +191,8 @@ namespace MusicProject.Controllers
             return Ok(roles);
         }
 
+
+     
         // Remove User to role
         [HttpPost]
         [Route("RemoveUserFromRole")]

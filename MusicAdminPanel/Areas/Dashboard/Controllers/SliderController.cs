@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.Settings;
 using DataAccess.Abstract;
 using Entites.Concrete;
 using Microsoft.AspNetCore.Authorization;
@@ -51,13 +52,13 @@ namespace MusicAdminPanel.Areas.Dashboard.Controllers
         // POST: LiveShowController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Slider? slider)
+        public ActionResult Create(Slider? slider, IFormFile Photo)
         {
             try
             {
-
-
+                _pictureService.Add(Photo);
                 _manager.Creat(slider);
+
                 return RedirectToAction(nameof(Index));
 
             }

@@ -34,8 +34,23 @@ namespace MusicAdminPanel.Controllers
             }
             return Json(res);
         }
+        [HttpPost]
+        public async Task<IActionResult> UploadMusic()
+        {
+            JsonResult res = new(new() { });
+            var audio = Request.Form.Files[0];
+            if (audio != null)
+            {
+                List<string> audioList = new();
+                var music = await _pictureService.AddMusic(audio);
+                if (music.Success) audioList.Add(music.Data);
+                res.Value = audioList;
+                return Json(res);
+            }
+            return Json(res);
+        }
 
-   
+
         private async void RecordInSession(string action)
         {
             HttpContext.Session.SetString("Lang", action);
